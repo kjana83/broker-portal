@@ -1,0 +1,322 @@
+<div>
+  <!-- Toggle button -->
+  <h3 class="display-4 text-black">Quick Stats</h3>
+  <div class="separator"></div>
+  <div class="rowDashboard">
+    <div class="col-xs-12 col-md-2">
+      <div class="card cardbox1" style="width: 12rem;">
+        <div class="card-body">
+          <h5 class="card-title  center-align">Clients</h5>
+          <div class="smallseparator"></div>
+          <p class="card-text colorwhite center-align">2</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-2">
+      <div class="card cardbox2" style="width: 12rem;">
+        <div class="card-body">
+          <h5 class="card-title center-align">Policies</h5>
+          <div class="smallseparator"></div>
+          <p class="card-text colorwhite center-align">7</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-2">
+      <div class="card cardbox3" style="width: 12rem;">
+        <div class="card-body">
+          <h5 class="card-title center-align">Sales</h5>
+          <div class="smallseparator"></div>
+          <p class="card-text colorwhite center-align">2</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-2">
+      <div class="card cardbox4" style="width: 12rem;">
+        <div class="card-body">
+          <h5 class="card-title center-align">Conversion</h5>
+          <div class="smallseparator"></div>
+          <p class="card-text colorwhite center-align">1</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-2">
+      <div class="card cardbox5" style="width: 13rem;">
+        <div class="card-body">
+          <h5 class="card-title center-align">Policy Reinstatement</h5>
+          <div class="smallseparator"></div>
+          <p class="card-text colorwhite center-align">2</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="separator"></div>
+  <div class="row">
+    <div class="col-xs-12 col-md-6">
+      <h2 class="display-4 text-black">NB Monthly Count</h2>
+    </div>
+    <div class="col-xs-6 col-md-4">
+      <h2 class="display-4 text-black">Rolling Commission</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-6">
+      <div id="chart" class="chart-box"></div>
+    </div>
+    <div class="col-xs-6 col-md-6">
+      <div id="doutchart" class="chart-box"></div>
+    </div>
+  </div>
+  <div class="separator"></div>
+  <div class="row">
+    <div class="col-xs-12 col-md-12">
+      <div class="row">
+        <h2
+          data-toggle="collapse"
+          href="#multiCollapseExample1"
+          aria-expanded="false"
+          id="activityList"
+          aria-controls="multiCollapseExample1"
+          class="display-4 text-black"
+          style="cursor: pointer;"
+        >
+          &nbsp;&nbsp;Activity List
+          <i class="fa fa-angle-down"></i>
+        </h2>
+        <!-- <i class="fa fa-compress mr-3  fa-fw"></i> -->
+      </div>
+      <div id="pendingApprovalList"></div>
+      <div class="collapse" id="multiCollapseExample1">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th colspan="8" scope="col">
+                <h4 style="color: green">UW Approval List</h4>
+              </th>
+            </tr>
+          </thead>
+          <thead>
+            <tr>
+              <th scope="col">Date</th>
+              <th scope="col">Company Name & Branch Number</th>
+              <th scope="col">Policy Number</th>
+              <th scope="col">Reference #</th>
+              <th scope="col">UW Reason</th>
+              <th scope="col">UW Agent</th>
+              <th scope="col">Policy Transaction</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Aug 10,2019</th>
+              <td>AA-Toronto</td>
+              <td>p-702126</td>
+              <td></td>
+              <th>Eligibility Review</th>
+              <td>Ontario -services</td>
+              <td>Policy Inquiry</td>
+              <td>Open</td>
+            </tr>
+            <tr>
+              <th>Aug 20,2019</th>
+              <td>AA-Toronto</td>
+              <td>p-704426</td>
+              <td></td>
+              <th>UW Referral</th>
+              <td>Ontario -services</td>
+              <td>New Business</td>
+              <td>Open</td>
+            </tr>
+            <tr>
+              <th>Jul 12,2019</th>
+              <td>AA-Toronto</td>
+              <td>p-712026</td>
+              <td></td>
+              <th>Eligibility Review</th>
+              <td>Ontario -services</td>
+              <td>New Business</td>
+              <td>Open</td>
+            </tr>
+          </tbody>
+
+          <thead>
+            <tr>
+              <th colspan="8" scope="col">
+                <h4 style="color: orange">Renewal List</h4>
+              </th>
+            </tr>
+          </thead>
+
+          <thead>
+            <tr>
+              <th scope="col">Date</th>
+              <th scope="col">Company Name & Branch number</th>
+              <th scope="col">Policy Number</th>
+              <th scope="col">Reference #</th>
+              <th scope="col">UW Reason</th>
+              <th scope="col">UW Agent</th>
+              <th scope="col">Policy Transaction</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Aug 10,2019</th>
+              <td>AA-Toronto</td>
+              <td>p-702126</td>
+              <td></td>
+              <th>Eligibility Review</th>
+              <td>Ontario -services</td>
+              <td>Renewal Rewrite</td>
+              <td>Suspended</td>
+            </tr>
+            <tr>
+              <th>Aug 20,2019</th>
+              <td>AA-Toronto</td>
+              <td>p-704426</td>
+              <td></td>
+              <th>Eligibility Review</th>
+              <td>Ontario -services</td>
+              <td>Renewal Rewrite</td>
+              <td>Open</td>
+            </tr>
+            <tr>
+              <th>Jul 12,2019</th>
+              <td>AA-Toronto</td>
+              <td>p-712026</td>
+              <td></td>
+              <th>Eligibility Review</th>
+              <td>Ontario -services</td>
+              <td>Renewal Rewrite</td>
+              <td>Closed</td>
+            </tr>
+          </tbody>
+
+          <thead>
+            <tr>
+              <th colspan="8" scope="col">
+                <h4 style="color: red">Pending Cancellation List</h4>
+              </th>
+            </tr>
+          </thead>
+
+          <thead>
+            <tr>
+              <th scope="col">Date</th>
+              <th scope="col">Company name & Branch number</th>
+              <th scope="col">Policy Number</th>
+              <th scope="col">Reference #</th>
+              <th scope="col">UW Reason</th>
+              <th scope="col">UW Agent</th>
+              <th scope="col">Policy Transaction</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Aug 10,2019</th>
+              <td>AA-Toronto</td>
+              <td>p-702126</td>
+              <td></td>
+              <th>Review</th>
+              <td>Ontario -services</td>
+              <td>Renewal Rewrite</td>
+              <td>Suspended</td>
+            </tr>
+            <tr>
+              <th>Aug 20,2019</th>
+              <td>AA-Toronto</td>
+              <td>p-704426</td>
+              <td></td>
+              <th>Review</th>
+              <td>Ontario -services</td>
+              <td>New Business</td>
+              <td>Open</td>
+            </tr>
+            <tr>
+              <th>Jul 12,2019</th>
+              <td>AA-Toronto</td>
+              <td>p-712026</td>
+              <td></td>
+              <th>Review</th>
+              <td>Ontario -services</td>
+              <td>Renewal Rewrite</td>
+              <td>Closed</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="separator"></div>
+  <div class="row">
+    <div class="col-xs-12 col-md-9">
+      <h2
+        data-toggle="collapse"
+        href="#"
+        aria-expanded="false"
+        aria-controls=""
+        class="display-4 text-black"
+      >
+        BMS Upload Summary
+      </h2>
+      <div id="chartStacked"></div>
+    </div>
+    <div class="col-xs-12 col-md-3">
+      <button
+        id="btnUpdate"
+        type="button"
+        class="btn btn-style  rounded-pill shadow-sm px-4 mb-4"
+      >
+        <a href="./BMSList.html">
+          <small class="text-uppercase font-weight-bold">BMS Error List</small>
+        </a>
+      </button>
+    </div>
+  </div>
+  <div class="separator"></div>
+  <div class="row" id="sanction">
+    <div class="col-xs-12 col-md-12">
+      <h2
+        data-toggle="collapse"
+        href="#"
+        aria-expanded="false"
+        aria-controls=""
+        class="display-4 text-black"
+      >
+        Broker Sanctioning Request Summary
+      </h2>
+      <div id="chartScantionBroker"></div>
+    </div>
+  </div>
+  <!-- End demo content -->
+</div>
+<script>
+  // tell the embed parent frame the height of the content
+  if (window.parent && window.parent.parent) {
+    window.parent.parent.postMessage(
+      [
+        "resultsFrame",
+        {
+          height: document.body.getBoundingClientRect().height,
+          slug: "ko18ravd"
+        }
+      ],
+      "*"
+    );
+  }
+  // always overwrite window.name, in case users try to set it manually
+  window.name = "result";
+  $("#activityList").click(function() {
+    var iangle = $(this).find("i");
+    console.log(iangle);
+    if ($(iangle).hasClass("fa-angle-down")) {
+      $(iangle).removeClass("fa-angle-down");
+      $(iangle).addClass("fa-angle-up");
+    } else {
+      $(iangle).addClass("fa-angle-down");
+      $(iangle).removeClass("fa-angle-up");
+    }
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts@latest"></script>

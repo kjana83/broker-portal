@@ -1,0 +1,90 @@
+<!-- Vertical navbar -->
+<div class="vertical-nav bg-white" id="sidebar">
+  <div class="py-4 px-3 mb-4 bg-light">
+    <div class="media d-flex align-items-center">
+      <img
+        src="https://res.cloudinary.com/mhmd/image/upload/v1556074849/avatar-1_tcnd60.png"
+        alt="..."
+        width="65"
+        class="mr-3 rounded-circle img-thumbnail shadow-sm"
+      />
+      <div class="media-body">
+        <h4 class="m-0">Broker Admin</h4>
+        <p class="font-weight-light text-muted mb-0">Central-Division</p>
+      </div>
+    </div>
+  </div>
+  <p class="text-gray font-weight-bold text-uppercase px-3 small pb-4 mb-0">
+    Main
+  </p>
+  <ul class="nav flex-column bg-white mb-0">
+    <li class="nav-item">
+      <a [routerLink]="['/dashboard']" class="nav-link text-dark  bg-light">
+        <i class="fa fa-th-large mr-3  fa-fw"></i>
+        Dashboard
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a href="#" class="nav-link text-dark ">
+        <i class="fa fa-address-card mr-3  fa-fw"></i>
+        Policy
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a href="#sanction" class="nav-link text-dark ">
+        <i class="fa fa-user mr-3  fa-fw"></i>
+        Sanction broker user
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#" class="nav-link text-dark ">
+        <i class="fa fa-search mr-3  fa-fw"></i>
+        Customer Search
+      </a>
+    </li>
+    <li class="nav-item">
+      <a [routerLink]="['/bms-error']" class="nav-link text-dark ">
+        <i class="fa fa-list mr-3  fa-fw"></i>
+        BMS Error list
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#" class="nav-link text-dark ">
+        <i class="fa  fa-credit-card mr-3  fa-fw"></i>
+        Claims
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#" class="nav-link text-dark ">
+        <i class="fa fa-cubes mr-3  fa-fw"></i>
+        Billing
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#" class="nav-link text-dark ">
+        <i class="fa fa-picture-o mr-3  fa-fw"></i>
+        Documents
+      </a>
+    </li>
+  </ul>
+  <p class="text-gray font-weight-bold text-uppercase px-3 small py-4 mb-0">
+    More..
+  </p>
+  <ul class="nav flex-column bg-white mb-0">
+    <li class="nav-item">
+      <a href="#" class="nav-link text-dark ">
+        <i class="fa  fa-suitcase                  mr-3  fa-fw"></i>
+        Portfolio transfer
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a href="#" class="nav-link text-dark ">
+        <i class="fa  fa-asterisk                  mr-3  fa-fw"></i>
+        Preferences
+      </a>
+    </li>
+  </ul>
+</div>

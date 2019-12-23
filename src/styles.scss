@@ -1,1 +1,328 @@
 /* You can add global styles to this file, and also import other style files */
+/*
+  *
+  * ==========================================
+  * CUSTOM UTIL CLASSES
+  * ==========================================
+  *
+  */
+
+.autoIcon {
+  background: url("./assets/img/icon-auto-grey.svg") no-repeat;
+  width: 40px;
+  display: inline-block;
+  height: 30px;
+}
+
+.propertyIcon {
+  background: url("./assets/img/icon-home-grey.svg") no-repeat;
+  width: 40px;
+  display: inline-block;
+  height: 30px;
+}
+.rowpadding {
+  padding-left: 15px;
+}
+
+.text-uppercase {
+  text-transform: uppercase !important;
+  color: black;
+}
+
+.rowmargin {
+  margin-bottom: 10px;
+}
+
+.rowDashboard {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -15px;
+}
+
+.sparkboxes .box1 {
+  background-image: linear-gradient(135deg, #abdcff 10%, #0396ff 100%);
+}
+
+.display-4 {
+  font-size: 2rem !important;
+  font-weight: 500;
+  line-height: 1.2;
+  font-family: "Open Sans", sans-serif;
+}
+
+.p-5 {
+  padding: 1.5rem !important;
+}
+
+.col-md-4 {
+  width: 33.33%;
+  padding: 0 25px;
+}
+
+.dropzone.dz-clickable {
+  cursor: pointer;
+}
+
+.dropzone {
+  border: 2px dashed #0087f7;
+  border-radius: 5px;
+  background: white;
+}
+
+.dropzone {
+  min-height: 150px;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  background: white;
+  padding: 54px 54px;
+}
+
+.dropzone.dz-clickable .dz-message,
+.dropzone.dz-clickable .dz-message * {
+  cursor: pointer;
+}
+
+.dropzone .dz-message {
+  font-weight: 400;
+}
+
+.dropzone .dz-message {
+  text-align: center;
+  margin: 2em 0;
+}
+
+.dropzone.dz-clickable * {
+  cursor: default;
+}
+
+.dropzone,
+.dropzone * {
+  box-sizing: border-box;
+}
+
+.text-white {
+  color: #fff !important;
+}
+
+.text-black {
+  color: #252525 !important;
+}
+
+table {
+  width: 100%;
+  background: white;
+}
+
+tbody tr {
+  border-top: 1px solid #e7e7e7;
+}
+
+th {
+  font-weight: bold;
+  font-family: Helvetica;
+  padding-bottom: 20px;
+}
+
+td,
+th {
+  text-align: center;
+  height: 25px;
+}
+
+td div {
+  margin: 0 auto;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+@media only screen and (max-width: 480px) {
+  th:first-child,
+  td:first-child {
+    display: none;
+  }
+  .row {
+    display: block;
+  }
+  .col-md-4 {
+    padding: 0;
+    width: 100%;
+  }
+}
+
+.h5,
+h5 {
+  font-size: 1rem;
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #212529;
+  font-size: 12px;
+}
+
+.dh {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -10px;
+  margin-left: -10px;
+}
+
+.cardbox1 {
+  background: #f8f9fa;
+}
+
+.cardbox2 {
+  background: #f8f9fa;
+}
+
+.cardbox3 {
+  background: #f8f9fa;
+}
+
+.cardbox4 {
+  background: #f8f9fa;
+}
+
+.cardbox5 {
+  background: #f8f9fa;
+}
+
+.colorwhite {
+  color: black;
+}
+
+.vertical-nav {
+  min-width: 17rem;
+  width: 17rem;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s;
+}
+
+.bpn {
+  background-color: #1bc98e;
+}
+
+.ago {
+  padding: 1rem !important;
+}
+
+.rowQuick {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -35px;
+  margin-left: -5px;
+}
+
+.page-content {
+  width: calc(100% - 17rem);
+  margin-left: 18rem;
+  transition: all 0.4s;
+}
+
+/* for toggle behavior */
+
+#sidebar.active {
+  margin-left: -17rem;
+}
+
+#content.active {
+  width: 100%;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  #sidebar {
+    margin-left: -17rem;
+  }
+  #sidebar.active {
+    margin-left: 0;
+  }
+  #content {
+    width: 100%;
+    margin: 0;
+  }
+  #content.active {
+    margin-left: 17rem;
+    width: calc(100% - 17rem);
+  }
+  #chart,
+  doutchart {
+    background: white;
+  }
+  .bpn {
+    background-color: #1bc98e;
+  }
+}
+
+body {
+  background: white; /* linear-gradient(to right, #599fd9, white); */
+  min-height: 100vh;
+  overflow-x: hidden;
+  color: #252525;
+  font-family: "Open Sans", sans-serif;
+}
+
+.separator {
+  margin: 1rem 0;
+  border-bottom: 1px dashed gray;
+}
+
+.smallseparator {
+  margin: 0.4rem 0;
+  color: grey;
+  border-bottom: 1px dashed grey;
+}
+
+.card-body {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 1rem !important;
+  background-color: #f8f9fa !important;
+  border: 1px solid #f8f9fa !important;
+}
+
+.text-uppercase {
+  letter-spacing: 0.1em;
+}
+
+.text-gray {
+  color: #aaa;
+}
+.center-align {
+  text-align: center;
+}
+
+.chart-box {
+  border: 1px solid gray;
+  background-color: white;
+}
+
+.fa-angle-down,
+.fa-angle-up {
+  font-size: 32px;
+  padding-top: 5px;
+  padding-left: 10px;
+}
+
+.btn-style,
+button {
+  background-color: #f8f9fa;
+  border: 1px solid lightgray;
+}
