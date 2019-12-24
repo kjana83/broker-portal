@@ -1,0 +1,54 @@
+<div class="row">
+  <div class="offset-8 col-md-4 chatModal">
+    <div class="row">
+      <div class="col-md-6">
+        <ul class="list-group">
+          <li class="list-group-item" *ngFor="let user of users">
+            <a (click)="startChatWith(user)"
+              ><span class="dot"></span>{{ user.substring(1, 15) }}</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-6" *ngIf="chatWithUser || messages.length > 0">
+        <h5>Chat With {{ chatWithUser.substring(0, 10) + "..." }}</h5>
+        <ul class="list-group">
+          <li class="list-group-item" *ngFor="let msg of messages">
+            <span
+              *ngIf="!msg.policyNumber"
+              [class.pull-right]="msg.from === 'me'"
+              >{{ msg.message }}</span
+            >
+            <div
+              *ngIf="msg.policyNumber"
+              class="thumbnail"
+              (click)="navigateTo(msg.policyData.link)"
+            >
+              <div class="caption">
+                <h3>{{ msg.policyNumber }}</h3>
+                <p>{{ msg.policyData.status }}</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="input-group">
+          <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="msgInput"
+            placeholder="Enter message."
+          />
+          <span class="input-group-btn">
+            <button
+              class="btn btn-primary"
+              type="button"
+              (click)="communicateWithUser(chatWithUser, msgInput)"
+            >
+              Send
+            </button>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
