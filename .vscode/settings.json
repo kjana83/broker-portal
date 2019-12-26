@@ -1,0 +1,4 @@
+{
+  "appService.defaultWebAppToDeploy": "/subscriptions/4fb4828c-013b-4adc-bee5-428a6bf240cb/resourceGroups/NewFreeRG/providers/Microsoft.Web/sites/abroker-portal",
+  "appService.deploySubpath": "dist/broker-portal"
+}

@@ -2,6 +2,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import * as io from 'socket.io-client';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +13,8 @@ export class WebsocketService {
   userId;
   private url = 'ws://localhost:5000';
   constructor() {
+
+    this.url = environment.ws_url;
     this.socket = io(this.url);
 
     this.socket.on('connect', () => {

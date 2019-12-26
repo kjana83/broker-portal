@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  ws_url: 'https://chat-server.azurewebsites.net/'
+  //ws_url: 'ws://localhost:5000'
 };
 
 /*
