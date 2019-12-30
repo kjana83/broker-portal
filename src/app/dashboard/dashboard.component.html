@@ -2,49 +2,13 @@
   <!-- Toggle button -->
   <h3 class="display-4 text-black">Quick Stats</h3>
   <div class="separator"></div>
-  <div class="rowDashboard">
-    <div class="col-xs-12 col-md-2">
-      <div class="card cardbox1" style="width: 12rem;">
+  <div class="row">
+    <div class="col-xs-12 col-md-2" *ngFor="let stat of stats">
+      <div class="card cardbox1">
         <div class="card-body">
-          <h5 class="card-title  center-align">Clients</h5>
+          <h5 class="card-title  center-align">{{ stat.type }}</h5>
           <div class="smallseparator"></div>
-          <p class="card-text colorwhite center-align">2</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-xs-12 col-md-2">
-      <div class="card cardbox2" style="width: 12rem;">
-        <div class="card-body">
-          <h5 class="card-title center-align">Policies</h5>
-          <div class="smallseparator"></div>
-          <p class="card-text colorwhite center-align">7</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-xs-12 col-md-2">
-      <div class="card cardbox3" style="width: 12rem;">
-        <div class="card-body">
-          <h5 class="card-title center-align">Sales</h5>
-          <div class="smallseparator"></div>
-          <p class="card-text colorwhite center-align">2</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-xs-12 col-md-2">
-      <div class="card cardbox4" style="width: 12rem;">
-        <div class="card-body">
-          <h5 class="card-title center-align">Conversion</h5>
-          <div class="smallseparator"></div>
-          <p class="card-text colorwhite center-align">1</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-xs-12 col-md-2">
-      <div class="card cardbox5" style="width: 13rem;">
-        <div class="card-body">
-          <h5 class="card-title center-align">Policy Reinstatement</h5>
-          <div class="smallseparator"></div>
-          <p class="card-text colorwhite center-align">2</p>
+          <p class="card-text colorwhite center-align">{{ stat.count }}</p>
         </div>
       </div>
     </div>
@@ -60,10 +24,22 @@
   </div>
   <div class="row">
     <div class="col-xs-12 col-md-6">
-      <div id="chart" class="chart-box"></div>
+      <apx-chart
+        [series]="nbChart.series"
+        [xaxis]="nbChart.xaxis"
+        [chart]="nbChart.chart"
+        [plotOptions]="nbChart.plotOptions"
+        [dataLabels]="nbChart.dataLabels"
+        [stroke]="nbChart.stroke"
+      ></apx-chart>
     </div>
     <div class="col-xs-6 col-md-6">
-      <div id="doutchart" class="chart-box"></div>
+      <apx-chart
+        [series]="commissionChart.series"
+        [labels]="commissionChart.labels"
+        [chart]="commissionChart.chart"
+        [responsive]="commissionChart.responsive"
+      ></apx-chart>
     </div>
   </div>
   <div class="separator"></div>
@@ -84,7 +60,12 @@
         </h2>
         <!-- <i class="fa fa-compress mr-3  fa-fw"></i> -->
       </div>
-      <div id="pendingApprovalList"></div>
+      <apx-chart
+        [series]="pendingChart.series"
+        [plotOptions]="pendingChart.plotOptions"
+        [chart]="pendingChart.chart"
+        [labels]="pendingChart.labels"
+      ></apx-chart>
       <div class="collapse" id="multiCollapseExample1">
         <table class="table table-striped">
           <thead>
