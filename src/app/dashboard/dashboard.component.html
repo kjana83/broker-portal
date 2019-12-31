@@ -2,13 +2,13 @@
   <!-- Toggle button -->
   <h3 class="display-4 text-black">Quick Stats</h3>
   <div class="separator"></div>
-  <div class="row">
+  <div class="row stats-replay-data">
     <div class="col-xs-12 col-md-2" *ngFor="let stat of stats">
       <div class="card cardbox1">
         <div class="card-body">
           <h5 class="card-title  center-align">{{ stat.type }}</h5>
           <div class="smallseparator"></div>
-          <p class="card-text colorwhite center-align">{{ stat.count }}</p>
+          <p class="card-text center-align">{{ stat.count }}</p>
         </div>
       </div>
     </div>
@@ -257,10 +257,10 @@
       <button
         id="btnUpdate"
         type="button"
-        class="btn btn-style  rounded-pill shadow-sm px-4 mb-4"
+        class="btn btn-style shadow-sm px-4 mb-4"
       >
         <a href="./BMSList.html">
-          <small class="text-uppercase font-weight-bold">BMS Error List</small>
+          BMS Error List
         </a>
       </button>
     </div>

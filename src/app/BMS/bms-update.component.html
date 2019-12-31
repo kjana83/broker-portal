@@ -1,31 +1,28 @@
 <h3 class="display-4 text-black">BMS Update</h3>
-<div class="separator"></div>
+<!--<div class="separator"></div>-->
 <div class="alert alert-light" role="alert">
   <div class="row">
     <div class="col-xs-12 col-md-2">
-      <h3 style="font-weight: bold">Quote:</h3>
+      <p style="font-weight: bold">Quote:</p>
     </div>
     <div class="col-xs-12 col-md-5">
-      <h3>{{ quote.quoteNumber }}</h3>
+      <p>{{ quote.quoteNumber }}</p>
     </div>
   </div>
   <div class="row">
     <div class="col-xs-12 col-md-2">
-      <h3 style="font-weight: bold">Reason:</h3>
+      <p style="font-weight: bold">Reason:</p>
     </div>
-    <div class="col-xs-12 col-md-9">
-      <h3>{{ quote.reason }}</h3>
+    <div class="col-xs-12 col-md-5">
+      <p>{{ quote.reason }}</p>
     </div>
   </div>
 </div>
 
-<div class="separator"></div>
-<div class="row rowmargin">
-  <div class="col-xs-12 col-md-6">
-    <span style="font-weight: bold">Do you currently have home insurance?</span>
-  </div>
-  <div class="col-xs-12 col-md-6">
-    <div class="form-check form-check-inline">
+<!--<div class="separator"></div>-->
+<fieldset class="form-row-field"> 
+    <legend>Do you currently have home insurance?</legend>   
+    <label class="form-check">Yes
       <input
         class="form-check-input"
         type="radio"
@@ -33,9 +30,10 @@
         id="inlineRadio1"
         value="option1"
       />
-      <label class="form-check-label" for="inlineRadio1">Yes</label>
-    </div>
-    <div class="form-check form-check-inline">
+      <span class="form-check-label"></span>
+      
+    </label>
+    <label class="form-check">No
       <input
         class="form-check-input"
         type="radio"
@@ -43,30 +41,26 @@
         id="inlineRadio2"
         value="option2"
       />
-      <label class="form-check-label" for="inlineRadio2">No</label>
-    </div>
-  </div>
-</div>
+      <span class="form-check-label"></span>
+    </label>
+  </fieldset>
 
-<div class="row rowmargin">
-  <div class="col-xs-12 col-md-6">
-    <span style="font-weight: bold"
-      >How many claims have you had in the past 5 years?</span
-    >
-  </div>
-  <div class="col-xs-12 col-md-6">
-    <input type="text" min="0" max="20" width="100%" />
-  </div>
+
+<div class="form-row-field">  
+    <label>How many claims have you had in the past 5 years?</label>
+    <div>
+      <input type="text" min="0" max="20"/>
+    </div>   
 </div>
-<div class="row">
+<!--<div class="row">
   <div class="col-xs-12 col-md-6"></div>
-  <div class="col-xs-12 col-md-6">
+  <div class="col-xs-12 col-md-6">-->
     <button
       id="btnUpdate"
       type="button"
-      class="btn btn-primary rounded-pill shadow-sm px-4 mb-4"
+      class="btn btn-primary shadow-sm px-4 mb-4 mt-4"
     >
       Submit
     </button>
-  </div>
-</div>
+  <!--</div>
+</div>-->
