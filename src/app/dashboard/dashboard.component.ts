@@ -63,7 +63,7 @@ export class DashboardComponent {
         }
       },
       fill: {
-        opacity: 1
+        opacity: 1                                                                                     
 
       },
 

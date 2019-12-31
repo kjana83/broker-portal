@@ -241,7 +241,17 @@
       >
         BMS Upload Summary
       </h2>
-      <div id="chartStacked"></div>
+      <apx-chart
+        [series]="bmsUploadChart.series"
+        [plotOptions]="bmsUploadChart.plotOptions"
+        [chart]="bmsUploadChart.chart"
+        [labels]="bmsUploadChart.labels"
+        [stroke]="bmsUploadChart.stroke"
+        [xaxis]="bmsUploadChart.xaxis"
+        [tooltip]="bmsUploadChart.tooltip"
+        [fill]="bmsUploadChart.fill"
+        [legend]="bmsUploadChart.legend"
+      ></apx-chart>
     </div>
     <div class="col-xs-12 col-md-3">
       <button
