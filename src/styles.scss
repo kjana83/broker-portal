@@ -7,6 +7,10 @@
   *
   */
 
+h1, h2, h3 {
+  color: #5C596D
+}
+
 .autoIcon {
   background: url("./assets/img/icon-auto-grey.svg") no-repeat;
   width: 40px;
@@ -275,8 +279,9 @@ body {
   background: white; /* linear-gradient(to right, #599fd9, white); */
   min-height: 100vh;
   overflow-x: hidden;
-  color: #252525;
+  color: #444444;
   font-family: 'Roboto', sans-serif;
+  font-size:1em;
 }
 
 .separator {
@@ -334,6 +339,9 @@ button {
   border: 1px solid lightgray;
   color: #ffff;
   text-transform: uppercase;
+  font-weight: bold;
+  line-height: 1.5625em;
+  padding:0.5em 0;
 }
 .btn-style:hover,
 button:hover{background-color:#CCC}
@@ -351,7 +359,10 @@ button a, button small {
   color: #001E60;
   font-weight: bold;
   border-radius: unset;
-  border-color:#ffd900;
+  border-color: #ffd900;
+  text-transform: uppercase;  
+  line-height: 1.5625em;
+  padding: 0.5em 1em;
 }
 .btn-primary:hover {
   background-color: #001E60;
@@ -408,6 +419,7 @@ label, legend {
   background-color: #fefefe;
   border: 2px solid #bd2624;
   border-radius: unset;
+  width:80%;
   }
 
 .form-check {
@@ -415,7 +427,7 @@ label, legend {
   position: relative;
   padding-left: 35px;
   margin-bottom: 12px;
-  cursor: pointer;  
+  cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -471,3 +483,8 @@ label, legend {
 .nav li:hover {background-color:#CCC}
 .nav {padding:0.5em;}
 .login-details{background-color:#CCC;}
+
+.table thead th {
+  border-bottom: 1px solid #ccc;
+  background-color:#eee;
+}

@@ -1,6 +1,6 @@
 <div>
   <!-- Toggle button -->
-  <h3 class="display-4 text-black">Quick Stats</h3>
+  <h3 class="display-4">Quick Stats</h3>
   <div class="separator"></div>
   <div class="row stats-replay-data">
     <div class="col-xs-12 col-md-2" *ngFor="let stat of stats">
@@ -16,10 +16,10 @@
   <div class="separator"></div>
   <div class="row">
     <div class="col-xs-12 col-md-6">
-      <h2 class="display-4 text-black">NB Monthly Count</h2>
+      <h2 class="display-4">NB Monthly Count</h2>
     </div>
     <div class="col-xs-6 col-md-4">
-      <h2 class="display-4 text-black">Rolling Commission</h2>
+      <h2 class="display-4">Rolling Commission</h2>
     </div>
   </div>
   <div class="row">
@@ -52,7 +52,7 @@
           aria-expanded="false"
           id="activityList"
           aria-controls="multiCollapseExample1"
-          class="display-4 text-black"
+          class="display-4"
           style="cursor: pointer;"
         >
           &nbsp;&nbsp;Activity List
@@ -237,7 +237,7 @@
         href="#"
         aria-expanded="false"
         aria-controls=""
-        class="display-4 text-black"
+        class="display-4"
       >
         BMS Upload Summary
       </h2>
@@ -258,10 +258,10 @@
         id="btnUpdate"
         type="button"
         class="btn btn-style shadow-sm px-4 mb-4"
-      >
-        <a href="./BMSList.html">
+        onclick="location.href='./BMSList.html'"
+      >      
           BMS Error List
-        </a>
+        
       </button>
     </div>
   </div>
@@ -273,7 +273,7 @@
         href="#"
         aria-expanded="false"
         aria-controls=""
-        class="display-4 text-black"
+        class="display-4"
       >
         Broker Sanctioning Request Summary
       </h2>
