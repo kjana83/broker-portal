@@ -7,6 +7,10 @@
   *
   */
 
+h1, h2, h3 {
+  color: #5C596D
+}
+
 .autoIcon {
   background: url("./assets/img/icon-auto-grey.svg") no-repeat;
   width: 40px;
@@ -49,7 +53,7 @@
   font-size: 2rem !important;
   font-weight: 500;
   line-height: 1.2;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .p-5 {
@@ -178,7 +182,7 @@ h5 {
   margin-left: -10px;
 }
 
-.cardbox1 {
+/*.cardbox1 {
   background: #f8f9fa;
 }
 
@@ -197,7 +201,7 @@ h5 {
 .cardbox5 {
   background: #f8f9fa;
 }
-
+  */
 .colorwhite {
   color: black;
 }
@@ -275,13 +279,14 @@ body {
   background: white; /* linear-gradient(to right, #599fd9, white); */
   min-height: 100vh;
   overflow-x: hidden;
-  color: #252525;
-  font-family: "Open Sans", sans-serif;
+  color: #444444;
+  font-family: 'Roboto', sans-serif;
+  font-size:1em;
 }
 
 .separator {
   margin: 1rem 0;
-  border-bottom: 1px dashed gray;
+  border-bottom: 1px solid #CCC;
 }
 
 .smallseparator {
@@ -290,12 +295,19 @@ body {
   border-bottom: 1px dashed grey;
 }
 
-.card-body {
+.stats-replay-data .card-body {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   padding: 1rem !important;
-  background-color: #f8f9fa !important;
-  border: 1px solid #f8f9fa !important;
+  background-color: #444 !important;
+  border: 1px solid #444 !important;
+  color: #fff;
+}
+
+.card-body {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 1rem !important; 
 }
 
 .text-uppercase {
@@ -323,24 +335,58 @@ body {
 
 .btn-style,
 button {
-  background-color: #f8f9fa;
+  background-color: #001E60;
   border: 1px solid lightgray;
+  color: #ffff;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 1.5625em;
+  padding:0.5em 0;
+}
+.btn-style:hover,
+button:hover{background-color:#CCC}
+.btn-style:hover a,
+button:hover a {
+  color: #413E45;
+}
+.btn-style a,
+button a, button small {
+  color: #fff
+}
+
+.btn-primary {
+  background-color: #ffd900;
+  color: #001E60;
+  font-weight: bold;
+  border-radius: unset;
+  border-color: #ffd900;
+  text-transform: uppercase;  
+  line-height: 1.5625em;
+  padding: 0.5em 1em;
+}
+.btn-primary:hover {
+  background-color: #001E60;
+  color: #fff;
 }
 
 .chatModal {
   .list-group {
     margin-top: 20px;
   }
+
   li {
     overflow: hidden;
   }
+
   h4 {
     color: white;
   }
+
   position: fixed;
   bottom: 0;
   color: black;
   background: gray;
+
   .dot {
     height: 15px;
     width: 15px;
@@ -349,11 +395,96 @@ button {
     display: inline-block;
     margin-right: 5px;
   }
+
   .thumbnail {
     cursor: pointer;
   }
+
   .col-md-6 {
     padding-right: 5px;
     padding-left: 5px;
   }
+}
+.stats-replay-data {
+  justify-content: center;  
+}
+label, legend {
+  font-size: 1.25em;
+  color: #5c596d;
+}
+
+.mt-2{margin-top:2em;}
+.alert-light {
+  color: #bd2624;
+  background-color: #fefefe;
+  border: 2px solid #bd2624;
+  border-radius: unset;
+  width:80%;
+  }
+
+.form-check {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* When the radio button is checked, add a blue background */
+.form-check input:checked ~ .form-check-label {
+  background-color: #4F9F31;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.form-check-label:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.form-check input:checked ~ .form-check-label:after {
+  display: block;
+}
+.form-check input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.form-check-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+  border: 1px solid #CCC;
+} 
+
+  .alert-light p {
+    margin-bottom: 0;
+  }
+
+  input[type="text"] {
+    padding: 0.3em;
+    width: 35%
+  }
+
+  .form-row-field {
+    margin-bottom: 0.5em;
+  }
+.nav li{border-bottom:1px solid #CCC;color:#444;font-weight:bold;}
+.nav li:hover {background-color:#CCC}
+.nav {padding:0.5em;}
+.login-details{background-color:#CCC;}
+
+.table thead th {
+  border-bottom: 1px solid #ccc;
+  background-color:#eee;
 }
