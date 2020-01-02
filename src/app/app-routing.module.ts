@@ -1,22 +1,18 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { BmsErrorListComponent } from './BMS/bms-error-list.component';
-import { BmsUpdateComponent } from './BMS/bms-update.component';
+import { LoginComponent } from './login/login.component';
+import { BMSModule } from './BMS/bms.module';
 
 
 const routes: Routes = [
   {
-    path: '', component: DashboardComponent,
+    path: '', component: LoginComponent
   },
   {
-    path: 'dashboard', component: DashboardComponent
+    path: 'login', component: LoginComponent
   },
   {
-    path: 'bms-error', component: BmsErrorListComponent
-  },
-  {
-    path: 'bms-update/:quoteNumber', component: BmsUpdateComponent
+    path: 'bms', loadChildren: () => BMSModule
   }
 ];
 

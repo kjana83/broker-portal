@@ -11,7 +11,8 @@ export class WebsocketService {
 
   private socket;
   userId;
-  private url = 'ws://localhost:5000';
+  userName;
+  private url;
   constructor() {
 
     this.url = environment.ws_url;
@@ -37,9 +38,9 @@ export class WebsocketService {
 
   to(toUserId: string, message: string) {
     if (message === 'Send Policy') {
-      this.socket.emit('communicate', { toUserId, message, policyNumber: 'W101004' });
+      this.socket.emit('communicate', { toUserId, message, policyNumber: 'W101004', userName: this.userName });
     } else {
-      this.socket.emit('communicate', { toUserId, message });
+      this.socket.emit('communicate', { toUserId, message, userName: this.userName });
     }
   }
 }

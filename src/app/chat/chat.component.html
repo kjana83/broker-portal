@@ -5,13 +5,13 @@
         <ul class="list-group">
           <li class="list-group-item" *ngFor="let user of users">
             <a (click)="startChatWith(user)"
-              ><span class="dot"></span>{{ user.substring(1, 15) }}</a
+              ><span class="dot"></span>{{ user.userName }}</a
             >
           </li>
         </ul>
       </div>
       <div class="col-md-6" *ngIf="chatWithUser || messages.length > 0">
-        <h5>Chat With {{ chatWithUser.substring(0, 10) + "..." }}</h5>
+        <h5>Chat With {{ chatWithUser.userName.substring(0, 10) + "..." }}</h5>
         <ul class="list-group">
           <li class="list-group-item" *ngFor="let msg of messages">
             <span
@@ -42,7 +42,7 @@
             <button
               class="btn btn-primary"
               type="button"
-              (click)="communicateWithUser(chatWithUser, msgInput)"
+              (click)="communicateWithUser(chatWithUser.userId, msgInput)"
             >
               Send
             </button>

@@ -9,7 +9,7 @@ import { WebsocketService } from '../services/websocket.service';
 })
 export class ChatComponent implements OnInit {
   users: string[] = [];
-  chatWithUser: string;
+  chatWithUser: any;
   messages: any[] = [];
   msgInput: string;
   constructor(
@@ -20,19 +20,21 @@ export class ChatComponent implements OnInit {
 
   ngOnInit() {
     this.webSocketService.listen('message').subscribe((data: any) => {
-      this.chatWithUser = data.from;
+      if (!this.chatWithUser) this.chatWithUser = {};
+      this.chatWithUser.userId = data.from;
+      this.chatWithUser.userName = data.userName;
       this.messages.push(data);
     });
 
-    this.webSocketService.listen('users').subscribe((users: string[]) => {
+    this.webSocketService.listen('users').subscribe((users: any[]) => {
       this.users = users.filter((user) => {
-        return user !== this.webSocketService.userId;
+        return user.userId !== this.webSocketService.userId;
       });
     });
   }
 
-  startChatWith(userId: string) {
-    this.chatWithUser = userId;
+  startChatWith(user: any) {
+    this.chatWithUser = user;
   }
 
   communicateWithUser(userId: string, message: string) {

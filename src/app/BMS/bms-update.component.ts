@@ -12,7 +12,6 @@ export class BmsUpdateComponent implements OnInit {
     this.quotes = [
       { quoteNumber: 'R2323932', date: '03-Jan-2020', status: 'Pending Clarification', lob: 'Property', reason: '2 Mandatory Claim Information missing' },
       { quoteNumber: 'R2783633', date: '12-Jan-2020', status: 'Missing Information', lob: 'Auto', reason: 'Missing Conviction Details' },
-
     ];
   }
 
