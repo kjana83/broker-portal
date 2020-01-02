@@ -12,7 +12,7 @@ const routes: Routes = [
     path: 'login', component: LoginComponent
   },
   {
-    path: 'bms', loadChildren: () => BMSModule
+    path: 'bms', loadChildren: "./BMS/bms.module#BMSModule"
   }
 ];
 
