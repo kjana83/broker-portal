@@ -210,9 +210,9 @@ h5 {
   min-width: 17rem;
   width: 17rem;
   height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
+  //position: fixed;
+  //top: 0;
+  //left: 0;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
   transition: all 0.4s;
 }
@@ -236,7 +236,7 @@ h5 {
 
 .page-content {
   width: calc(100% - 17rem);
-  margin-left: 18rem;
+  //margin-left: 18rem;
   transition: all 0.4s;
 }
 
@@ -298,18 +298,36 @@ body {
 .stats-replay-data .card-body {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
-  padding: 1rem !important;
-  background-color: #444 !important;
-  border: 1px solid #444 !important;
+  // padding: 1rem !important;
+  // background-color: #444 !important;
+  border: 1px solid #413E45 !important;
   color: #fff;
 }
 
 .card-body {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
-  padding: 1rem !important; 
+ // padding: 1rem !important;
+ padding:0;
 }
-
+.card-body .card-title {
+  padding: 0.5em;
+  background-color: #413E45;
+  color: #fff;
+  margin: 0;
+}
+.card-text {
+  color: #413E45;
+  padding: 0.5em;
+}
+.card-body-header {
+  background-color: #413E45;
+  color: #fff;
+  padding: 0.5em;
+}
+.card-body-header h3{
+    color:#fff;
+}
 .text-uppercase {
   letter-spacing: 0.1em;
 }
@@ -482,9 +500,11 @@ label, legend {
 .nav li{border-bottom:1px solid #CCC;color:#444;font-weight:bold;}
 .nav li:hover {background-color:#CCC}
 .nav {padding:0.5em;}
-.login-details{background-color:#CCC;}
-
+.login-details {
+  background-color: #001E60;
+}
+.media{color:#fff;}
 .table thead th {
   border-bottom: 1px solid #ccc;
-  background-color:#eee;
+  background-color: #eee;
 }

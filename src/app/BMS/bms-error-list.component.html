@@ -1,25 +1,26 @@
-<h3 class="display-4">BMS Error List</h3>
+<h3 class="display-4 ">BMS Error List</h3>
 <div class="row">
   <div class="col-sm-6" *ngFor="let quote of quotes">
     <div class="card">
       <div class="card-body">
-        <div class="d-flex w-100 justify-content-between">
+        <div class="d-flex w-100 justify-content-between card-body-header">
           <h3 class="mb-1">{{ quote.quoteNumber }}</h3>
           <small>{{ quote.date }}</small>
         </div>
-        <p class="card-text">
-          {{ quote.reason }}
-        </p>
-        <span
-          class="pull-right {{
-            quote.lob === 'Property' ? 'propertyIcon' : 'autoIcon'
-          }}"
-        ></span>
-        <a
-          href="/bms/bms-update/{{ quote.quoteNumber }}"
-          class="btn btn-primary"
-          >Submit</a
-        >
+        <div class="card-text">
+          <p>
+            {{ quote.reason }}
+          </p>
+
+          <a href="/bms-update/{{ quote.quoteNumber }}" class="btn btn-primary"
+            >Submit</a
+          >
+          <div
+            class="pull-right {{
+              quote.lob === 'Property' ? 'propertyIcon' : 'autoIcon'
+            }}"
+          ></div>
+        </div>
       </div>
     </div>
   </div>
