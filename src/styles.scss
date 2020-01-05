@@ -6,7 +6,7 @@
   * ==========================================
   *
   */
-
+html,body,.container,app-root>div{height:100%;}
 h1, h2, h3 {
   color: #5C596D
 }
@@ -402,13 +402,13 @@ button a, button small {
 
   position: fixed;
   bottom: 0;
-  color: black;
-  background: gray;
+  color: #444;
+  background: #00788A;
 
   .dot {
-    height: 15px;
-    width: 15px;
-    background-color: green;
+    height: 0.5em;
+    width: 0.5em;
+    background-color: #4F9F31;
     border-radius: 50%;
     display: inline-block;
     margin-right: 5px;
@@ -508,3 +508,32 @@ label, legend {
   border-bottom: 1px solid #ccc;
   background-color: #eee;
 }
+
+.login-section{max-width:540px;height:100%;margin:auto;}
+.login-section input[type='text'], .login-section input[type='password'], .login-section select {
+  width: 75%;
+}
+.login-content {
+  border: 1px solid #CCC;
+  background-color: #E5EDF8;
+  padding:1em;
+}
+.chat-window {
+  background-color: #fff;
+  padding: 1em;
+  border-radius: 0.5em;
+  margin-bottom: 1em;
+}
+.chat-window .input-group {
+  align-items: center;
+}
+.chat-window  .list-group-item{
+    background-color:#eee;
+    border:1px solid #ccc;
+    border-radius:0.5em;
+}
+.chat-window  .list-group-item:last-child{
+    border-radius:0.5em;
+}
+
+.chatModal{z-index:999;}

@@ -1,7 +1,7 @@
 <div class="row">
   <div class="offset-8 col-md-4 chatModal">
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-12 mb-3">
         <ul class="list-group">
           <li class="list-group-item" *ngFor="let user of users">
             <a (click)="startChatWith(user)"
@@ -10,10 +10,10 @@
           </li>
         </ul>
       </div>
-      <div class="col-md-6" *ngIf="chatWithUser || messages.length > 0">
-        <h5>Chat With {{ chatWithUser.userName.substring(0, 10) + "..." }}</h5>
+      <div class="col-md-12 chat-window" *ngIf="chatWithUser || messages.length > 0">
+        <h5 class="font-weight-bold">Chat With {{ chatWithUser.userName.substring(0, 10) + "..." }}</h5>
         <ul class="list-group">
-          <li class="list-group-item" *ngFor="let msg of messages">
+          <li class="list-group-item mb-2" *ngFor="let msg of messages">
             <span
               *ngIf="!msg.policyNumber"
               [class.pull-right]="msg.from === 'me'"
@@ -38,7 +38,7 @@
             [(ngModel)]="msgInput"
             placeholder="Enter message."
           />
-          <span class="input-group-btn">
+          <span class="input-group-btn ml-2">
             <button
               class="btn btn-primary"
               type="button"
