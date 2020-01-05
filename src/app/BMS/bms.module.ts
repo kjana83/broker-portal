@@ -11,11 +11,13 @@ import { BmsUpdateComponent } from './bms-update.component';
 import { ChatComponent } from '../chat/chat.component';
 import { BMSRoutingModule } from './bms-routing.module';
 import { CommonModule } from '@angular/common';
+import { NavWidgetUWComponent } from '../base/nav-widget-uw.component';
 
 @NgModule({
   declarations: [
     BMSComponent,
     NavWidgetComponent,
+    NavWidgetUWComponent,
     DashboardComponent,
     BmsErrorListComponent,
     BmsUpdateComponent,

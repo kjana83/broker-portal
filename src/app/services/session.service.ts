@@ -1,5 +1,6 @@
 import { Injectable } from "@angular/core";
 import { WebsocketService } from './websocket.service';
+import { User } from '../model/user.model';
 
 @Injectable({
   providedIn: 'root'
@@ -7,22 +8,12 @@ import { WebsocketService } from './websocket.service';
 export class SessionService {
   currentUser: User;
   constructor(private webSocketService: WebsocketService) { }
-  addUser(username: string) {
+  addUser(user: User) {
     const userId = this.webSocketService.userId;
-    if (this.currentUser) {
-      this.currentUser.sessionId.push(userId);
-    } else {
-      this.currentUser = new User();
-      this.currentUser.username = username;
-      this.currentUser.sessionId = [];
-      this.currentUser.sessionId.push(userId);
-      this.webSocketService.userName = username;
-      this.webSocketService.emit('adduser', { userId: userId, userName: username });
-    }
+    this.currentUser = user;
+    this.currentUser.userId = userId;
+    this.webSocketService.userName = user.userName
+    this.webSocketService.emit('adduser', { userId: userId, userName: user.userName });
   }
 }
 
-class User {
-  username: string;
-  sessionId: string[];
-}

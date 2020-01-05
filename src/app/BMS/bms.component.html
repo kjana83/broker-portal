@@ -1,5 +1,6 @@
 <div class="row">
-  <nav-widget></nav-widget>
+  <nav-widget *ngIf="user.role != 'csr'"></nav-widget>
+  <nav-widget-uw *ngIf="user.role === 'csr'"></nav-widget-uw>
   <div class="page-content p-5" id="content">
     <!-- Toggle button -->
 
