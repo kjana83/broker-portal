@@ -510,7 +510,9 @@ label, legend {
 }
 
 .login-section{max-width:540px;height:100%;margin:auto;}
-.login-section input[type='text']{width:75%;}
+.login-section input[type='text'], .login-section input[type='password'], .login-section select {
+  width: 75%;
+}
 .login-content {
   border: 1px solid #CCC;
   background-color: #E5EDF8;

@@ -6,6 +6,21 @@
         <label for="username">User name</label>
         <input type="text" class="form-control mt-1" [(ngModel)]="username" required />
       </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password"
+               class="form-control"
+               [(ngModel)]="password"
+               required />
+      </div>
+      <div class="form-group">
+        <label for="username">Role</label>
+        <select name="role" [(ngModel)]="role" class="form-control">
+          <option value="broker">Broker</option>
+          <option value="csr">CSR</option>
+          <option value="billing">Billing</option>
+        </select>
+      </div>
       <button type="submit" class="btn btn-primary mt-3" (click)="submit()">
         Submit
       </button>
