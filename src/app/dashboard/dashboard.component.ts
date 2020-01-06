@@ -10,6 +10,10 @@ export class DashboardComponent {
   pendingChart: any;
   commissionChart: any;
   bmsUploadChart: any;
+  showActivity: boolean;
+  toggleActivity() {
+    this.showActivity = !this.showActivity;
+  }
   constructor() {
     this.stats = [
       { type: 'Clients', count: 2 },

@@ -6,7 +6,7 @@
     <div class="col-xs-12 col-md-2" *ngFor="let stat of stats">
       <div class="card cardbox1">
         <div class="card-body">
-          <h5 class="card-title  center-align">{{ stat.type }}</h5>          
+          <h5 class="card-title  center-align">{{ stat.type }}</h5>
           <p class="card-text center-align">{{ stat.count }}</p>
         </div>
       </div>
@@ -46,16 +46,16 @@
     <div class="col-xs-12 col-md-12">
       <div class="row">
         <h2
-          data-toggle="collapse"
-          href="#multiCollapseExample1"
-          aria-expanded="false"
+          (click)="toggleActivity()"
           id="activityList"
-          aria-controls="multiCollapseExample1"
           class="display-4"
           style="cursor: pointer;"
         >
           &nbsp;&nbsp;Activity List
-          <i class="fa fa-angle-down"></i>
+          <i
+            class="fa"
+            [ngClass]="showActivity?'fa-angle-up':'fa-angle-down'"
+          ></i>
         </h2>
         <!-- <i class="fa fa-compress mr-3  fa-fw"></i> -->
       </div>
@@ -65,7 +65,7 @@
         [chart]="pendingChart.chart"
         [labels]="pendingChart.labels"
       ></apx-chart>
-      <div class="collapse" id="multiCollapseExample1">
+      <div *ngIf="showActivity">
         <table class="table table-striped">
           <thead>
             <tr>
@@ -258,9 +258,8 @@
         type="button"
         class="btn btn-style shadow-sm px-4 mb-4"
         onclick="location.href='./BMSList.html'"
-      >      
-          BMS Error List
-        
+      >
+        BMS Error List
       </button>
     </div>
   </div>

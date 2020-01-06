@@ -12,7 +12,9 @@
             {{ quote.reason }}
           </p>
 
-          <a href="/bms-update/{{ quote.quoteNumber }}" class="btn btn-primary"
+          <a
+            [routerLink]="['/bms/bms-update', quote.quoteNumber]"
+            class="btn btn-primary"
             >Submit</a
           >
           <div

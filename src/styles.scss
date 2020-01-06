@@ -6,9 +6,16 @@
   * ==========================================
   *
   */
-html,body,.container,app-root>div{height:100%;}
-h1, h2, h3 {
-  color: #5C596D
+html,
+body,
+.container,
+app-root > div {
+  height: 100%;
+}
+h1,
+h2,
+h3 {
+  color: #5c596d;
 }
 
 .autoIcon {
@@ -53,7 +60,7 @@ h1, h2, h3 {
   font-size: 2rem !important;
   font-weight: 500;
   line-height: 1.2;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .p-5 {
@@ -280,13 +287,13 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   color: #444444;
-  font-family: 'Roboto', sans-serif;
-  font-size:1em;
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
 }
 
 .separator {
   margin: 1rem 0;
-  border-bottom: 1px solid #CCC;
+  border-bottom: 1px solid #ccc;
 }
 
 .smallseparator {
@@ -300,33 +307,33 @@ body {
   flex: 1 1 auto;
   // padding: 1rem !important;
   // background-color: #444 !important;
-  border: 1px solid #413E45 !important;
+  border: 1px solid #413e45 !important;
   color: #fff;
 }
 
 .card-body {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
- // padding: 1rem !important;
- padding:0;
+  // padding: 1rem !important;
+  padding: 0;
 }
 .card-body .card-title {
   padding: 0.5em;
-  background-color: #413E45;
+  background-color: #413e45;
   color: #fff;
   margin: 0;
 }
 .card-text {
-  color: #413E45;
+  color: #413e45;
   padding: 0.5em;
 }
 .card-body-header {
-  background-color: #413E45;
+  background-color: #413e45;
   color: #fff;
   padding: 0.5em;
 }
-.card-body-header h3{
-    color:#fff;
+.card-body-header h3 {
+  color: #fff;
 }
 .text-uppercase {
   letter-spacing: 0.1em;
@@ -353,37 +360,38 @@ body {
 
 .btn-style,
 button {
-  background-color: #001E60;
+  background-color: #001e60;
   border: 1px solid lightgray;
   color: #ffff;
-  text-transform: uppercase;
   font-weight: bold;
   line-height: 1.5625em;
-  padding:0.5em 0;
+  padding: 0.5em 0;
 }
 .btn-style:hover,
-button:hover{background-color:#CCC}
+button:hover {
+  background-color: #ccc;
+}
 .btn-style:hover a,
 button:hover a {
-  color: #413E45;
+  color: #413e45;
 }
 .btn-style a,
-button a, button small {
-  color: #fff
+button a,
+button small {
+  color: #fff;
 }
 
 .btn-primary {
   background-color: #ffd900;
-  color: #001E60;
+  color: #001e60;
   font-weight: bold;
   border-radius: unset;
   border-color: #ffd900;
-  text-transform: uppercase;  
   line-height: 1.5625em;
   padding: 0.5em 1em;
 }
 .btn-primary:hover {
-  background-color: #001E60;
+  background-color: #001e60;
   color: #fff;
 }
 
@@ -403,12 +411,12 @@ button a, button small {
   position: fixed;
   bottom: 0;
   color: #444;
-  background: #00788A;
+  background: #00788a;
 
   .dot {
     height: 0.5em;
     width: 0.5em;
-    background-color: #4F9F31;
+    background-color: #4f9f31;
     border-radius: 50%;
     display: inline-block;
     margin-right: 5px;
@@ -424,21 +432,24 @@ button a, button small {
   }
 }
 .stats-replay-data {
-  justify-content: center;  
+  justify-content: center;
 }
-label, legend {
+label,
+legend {
   font-size: 1.25em;
   color: #5c596d;
 }
 
-.mt-2{margin-top:2em;}
+.mt-2 {
+  margin-top: 2em;
+}
 .alert-light {
   color: #bd2624;
   background-color: #fefefe;
   border: 2px solid #bd2624;
   border-radius: unset;
-  width:80%;
-  }
+  width: 80%;
+}
 
 .form-check {
   display: block;
@@ -453,7 +464,7 @@ label, legend {
 }
 /* When the radio button is checked, add a blue background */
 .form-check input:checked ~ .form-check-label {
-  background-color: #4F9F31;
+  background-color: #4f9f31;
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
@@ -482,41 +493,58 @@ label, legend {
   width: 25px;
   background-color: #eee;
   border-radius: 50%;
-  border: 1px solid #CCC;
-} 
-
-  .alert-light p {
-    margin-bottom: 0;
-  }
-
-  input[type="text"] {
-    padding: 0.3em;
-    width: 35%
-  }
-
-  .form-row-field {
-    margin-bottom: 0.5em;
-  }
-.nav li{border-bottom:1px solid #CCC;color:#444;font-weight:bold;}
-.nav li:hover {background-color:#CCC}
-.nav {padding:0.5em;}
-.login-details {
-  background-color: #001E60;
+  border: 1px solid #ccc;
 }
-.media{color:#fff;}
+
+.alert-light p {
+  margin-bottom: 0;
+}
+
+input[type="text"] {
+  padding: 0.3em;
+  width: 35%;
+}
+
+.form-row-field {
+  margin-bottom: 0.5em;
+}
+.nav li {
+  border-bottom: 1px solid #ccc;
+  color: #444;
+  font-weight: bold;
+}
+.nav li:hover {
+  background-color: #ccc;
+}
+.nav {
+  padding: 0.5em;
+}
+.login-details {
+  background-color: #001e60;
+}
+.media {
+  color: #fff;
+}
 .table thead th {
   border-bottom: 1px solid #ccc;
   background-color: #eee;
 }
 
-.login-section{max-width:540px;height:100%;margin:auto;}
-.login-section input[type='text'], .login-section input[type='password'], .login-section select {
+.login-section {
+  max-width: 500px;
+  height: 100%;
+  margin: auto;
+}
+.login-section input[type="text"],
+.login-section input[type="password"],
+.login-section select {
   width: 75%;
 }
 .login-content {
-  border: 1px solid #CCC;
-  background-color: #E5EDF8;
-  padding:1em;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  padding: 1em;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
 }
 .chat-window {
   background-color: #fff;
@@ -527,13 +555,73 @@ label, legend {
 .chat-window .input-group {
   align-items: center;
 }
-.chat-window  .list-group-item{
-    background-color:#eee;
-    border:1px solid #ccc;
-    border-radius:0.5em;
+.chat-window .list-group-item {
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 0.5em;
 }
-.chat-window  .list-group-item:last-child{
-    border-radius:0.5em;
+.chat-window .list-group-item:last-child {
+  border-radius: 0.5em;
 }
 
-.chatModal{z-index:999;}
+.chatModal {
+  z-index: 999;
+}
+
+.blinking {
+  -webkit-animation: 1s blink ease infinite;
+  -moz-animation: 1s blink ease infinite;
+  -ms-animation: 1s blink ease infinite;
+  -o-animation: 1s blink ease infinite;
+  animation: 1s blink ease infinite;
+}
+
+@keyframes "blink" {
+  from,
+  to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes blink {
+  from,
+  to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes "blink" {
+  from,
+  to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes "blink" {
+  from,
+  to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes "blink" {
+  from,
+  to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}

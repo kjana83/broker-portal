@@ -5,13 +5,19 @@
         <ul class="list-group">
           <li class="list-group-item" *ngFor="let user of users">
             <a (click)="startChatWith(user)"
-              ><span class="dot"></span>{{ user.userName }}</a
+              ><span class="dot" [class.blinking]="user.newMessage"></span
+              >{{ user.userName }}</a
             >
           </li>
         </ul>
       </div>
-      <div class="col-md-12 chat-window" *ngIf="chatWithUser || messages.length > 0">
-        <h5 class="font-weight-bold">Chat With {{ chatWithUser.userName.substring(0, 10) + "..." }}</h5>
+      <div
+        class="col-md-12 chat-window"
+        *ngIf="chatWithUser && chatWithUser.userName"
+      >
+        <h5 class="font-weight-bold">
+          Chat With {{ chatWithUser.userName.substring(0, 10) + "..." }}
+        </h5>
         <ul class="list-group">
           <li class="list-group-item mb-2" *ngFor="let msg of messages">
             <span
@@ -42,7 +48,7 @@
             <button
               class="btn btn-primary"
               type="button"
-              (click)="communicateWithUser(chatWithUser.userId, msgInput)"
+              (click)="communicateWithUser(chatWithUser, msgInput)"
             >
               Send
             </button>
