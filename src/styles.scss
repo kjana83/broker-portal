@@ -500,8 +500,7 @@ legend {
   margin-bottom: 0;
 }
 
-input[type="text"] {
-  padding: 0.3em;
+input[type="text"] {  
   width: 35%;
 }
 
@@ -510,21 +509,30 @@ input[type="text"] {
 }
 .nav li {
   border-bottom: 1px solid #ccc;
-  color: #444;
-  font-weight: bold;
+  color: #444;  
+  padding:0.5em;
 }
+.nav li:last-child{border-bottom:none;}
 .nav li:hover {
-  background-color: #ccc;
+  background-color: #fff;
 }
-.nav {
-  padding: 0.5em;
+.nav li:hover a {
+  color: #004FB6;
 }
-.login-details {
-  background-color: #001e60;
-}
-.media {
+
+
+.nav li a {
   color: #fff;
 }
+.nav {
+  padding: 0.5em 0;
+  background-color: #004FB6;
+  color: #fff;
+}
+.login-details {
+  background-color: #FFD900;
+}
+
 .table thead th {
   border-bottom: 1px solid #ccc;
   background-color: #eee;
@@ -542,7 +550,7 @@ input[type="text"] {
 }
 .login-content {
   border: 1px solid #ccc;
-  background-color: #f9f9f9;
+  background-color: #E5EDF8;
   padding: 1em;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
 }
@@ -551,6 +559,7 @@ input[type="text"] {
   padding: 1em;
   border-radius: 0.5em;
   margin-bottom: 1em;
+  font-size:0.8em;
 }
 .chat-window .input-group {
   align-items: center;
@@ -566,6 +575,10 @@ input[type="text"] {
 
 .chatModal {
   z-index: 999;
+  right:0;
+  width:15em;
+  
+  
 }
 
 .blinking {
@@ -624,4 +637,8 @@ input[type="text"] {
   50% {
     opacity: 1;
   }
+}
+              
+.chatModalposition{
+    left:-3em;
 }
