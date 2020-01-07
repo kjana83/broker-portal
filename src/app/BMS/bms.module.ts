@@ -12,6 +12,9 @@ import { ChatComponent } from '../chat/chat.component';
 import { BMSRoutingModule } from './bms-routing.module';
 import { CommonModule } from '@angular/common';
 import { NavWidgetUWComponent } from '../base/nav-widget-uw.component';
+import { BMSReviewComponent } from './bms-review.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BMSConfirmationComponent } from './bms-confirmation.component';
 
 @NgModule({
   declarations: [
@@ -21,13 +24,19 @@ import { NavWidgetUWComponent } from '../base/nav-widget-uw.component';
     DashboardComponent,
     BmsErrorListComponent,
     BmsUpdateComponent,
-    ChatComponent
+    ChatComponent,
+    BMSReviewComponent,
+    BMSConfirmationComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
+    NgbModule,
     BMSRoutingModule,
     NgApexchartsModule
+  ],
+  entryComponents: [
+    BMSReviewComponent
   ],
   providers: [],
   bootstrap: [BMSComponent]

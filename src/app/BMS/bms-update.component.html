@@ -1,4 +1,4 @@
-<h3 class="display-4 text-black">BMS Update</h3>
+<h3 class="display-4 text-black">{{ title }}</h3>
 <!--<div class="separator"></div>-->
 <div class="alert alert-light" role="alert">
   <div class="row">
@@ -19,10 +19,16 @@
   </div>
 </div>
 
-<!--<div class="separator"></div>-->
-<fieldset class="form-row-field"> 
-    <legend>Do you currently have home insurance?</legend>   
-    <label class="form-check">Yes
+<div
+  class=""
+  [ngClass]="quote.lob === 'Property' ? 'd-block' : 'd-none'"
+  id="property"
+>
+  <!--<div class="separator"></div>-->
+  <fieldset class="form-row-field">
+    <legend>Do you currently have home insurance?</legend>
+    <label class="form-check"
+      >Yes
       <input
         class="form-check-input"
         type="radio"
@@ -31,9 +37,9 @@
         value="option1"
       />
       <span class="form-check-label"></span>
-      
     </label>
-    <label class="form-check">No
+    <label class="form-check"
+      >No
       <input
         class="form-check-input"
         type="radio"
@@ -45,22 +51,99 @@
     </label>
   </fieldset>
 
-
-<div class="form-row-field">  
-    <label for="no_of_claims">How many claims have you had in the past 5 years?</label>
+  <div class="form-row-field">
+    <label for="no_of_claims"
+      >How many claims have you had in the past 5 years?</label
+    >
     <div>
-      <input type="text" min="0" max="20" id="no_of_claims"/>
-    </div>   
+      <input type="text" min="0" max="20" id="no_of_claims" />
+    </div>
+  </div>
+</div>
+<div [ngClass]="quote.lob === 'Auto' ? 'd-block' : 'd-none'" id="auto">
+  <fieldset class="form-row-field">
+    <legend>How many major convictions you had in last 3 years?</legend>
+    <label class="form-check"
+      >None
+      <input
+        class="form-check-input"
+        type="radio"
+        name="inlineRadioOptions"
+        id="inlineRadio1"
+        value="option1"
+      />
+      <span class="form-check-label"></span>
+    </label>
+    <label class="form-check"
+      >1 or More
+      <input
+        class="form-check-input"
+        type="radio"
+        name="inlineRadioOptions"
+        id="inlineRadio2"
+        value="option2"
+      />
+      <span class="form-check-label"></span>
+    </label>
+  </fieldset>
+
+  <fieldset class="form-row-field">
+    <legend>How many minor convictions you had in last 3 years?</legend>
+    <label class="form-check"
+      >None
+      <input
+        class="form-check-input"
+        type="radio"
+        name="inlineRadioOptions"
+        id="inlineRadio1"
+        value="option1"
+      />
+      <span class="form-check-label"></span>
+    </label>
+    <label class="form-check"
+      >One
+      <input
+        class="form-check-input"
+        type="radio"
+        name="inlineRadioOptions"
+        id="inlineRadio2"
+        value="option2"
+      />
+      <span class="form-check-label"></span>
+    </label>
+    <label class="form-check"
+      >Two
+      <input
+        class="form-check-input"
+        type="radio"
+        name="inlineRadioOptions"
+        id="inlineRadio2"
+        value="option2"
+      />
+      <span class="form-check-label"></span>
+    </label>
+    <label class="form-check"
+      >3 or More
+      <input
+        class="form-check-input"
+        type="radio"
+        name="inlineRadioOptions"
+        id="inlineRadio2"
+        value="option2"
+      />
+      <span class="form-check-label"></span>
+    </label>
+  </fieldset>
 </div>
 <!--<div class="row">
   <div class="col-xs-12 col-md-6"></div>
   <div class="col-xs-12 col-md-6">-->
-    <button
-      id="btnUpdate"
-      type="button"
-      class="btn btn-primary shadow-sm px-4 mb-4 mt-4"
-    >
-      Submit
-    </button>
-  <!--</div>
-</div>-->
+<button
+  id="btnUpdate"
+  type="button"
+  class="btn btn-primary shadow-sm px-4 mb-4 mt-4"
+  (click)="open()"
+>
+  Submit
+</button>
+

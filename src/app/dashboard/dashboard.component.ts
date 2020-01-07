@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -11,10 +12,14 @@ export class DashboardComponent {
   commissionChart: any;
   bmsUploadChart: any;
   showActivity: boolean;
+  sanctionChart: any;
   toggleActivity() {
     this.showActivity = !this.showActivity;
   }
-  constructor() {
+  navigateToError() {
+    this.router.navigate(['/bms/bms-error']);
+  }
+  constructor(private router: Router) {
     this.stats = [
       { type: 'Clients', count: 2 },
       { type: 'Policies', count: 7 },
@@ -22,6 +27,65 @@ export class DashboardComponent {
       { type: 'Conversion', count: 1 },
       { type: 'Renewal', count: 2 },
     ];
+    this.sanctionChart = {
+      chart: {
+        height: 350,
+        type: 'radialBar',
+      },
+      plotOptions: {
+        radialBar: {
+          offsetY: -10,
+          startAngle: 0,
+          endAngle: 270,
+          hollow: {
+            margin: 5,
+            size: '30%',
+            background: 'transparent',
+            image: undefined,
+          },
+          dataLabels: {
+            name: {
+              show: false,
+
+            },
+            value: {
+              show: false,
+            }
+          }
+        }
+      },
+      colors: ['#1ab7ea', '#0084ff', '#39539E', '#0077B5'],
+      series: [76, 67, 61, 90],
+      labels: ['New broker request completed', 'New broker request pending', 'Change broker access completed', 'Change broker access pending'],
+      legend: {
+        show: true,
+        floating: true,
+        fontSize: '16px',
+        position: 'left',
+        offsetX: 160,
+        offsetY: 10,
+        labels: {
+          useSeriesColors: true,
+        },
+        markers: {
+          size: 0
+        },
+        formatter: function (seriesName, opts) {
+          return seriesName + ":  " + opts.w.globals.series[opts.seriesIndex]
+        },
+        itemMargin: {
+          horizontal: 1,
+        }
+      },
+      responsive: [{
+        breakpoint: 480,
+        options: {
+          legend: {
+            show: false
+          }
+        }
+      }]
+    };
     this.bmsUploadChart = {
       chart: {
         height: 350,
@@ -67,7 +131,7 @@ export class DashboardComponent {
         }
       },
       fill: {
-        opacity: 1                                                                                     
+        opacity: 1
 
       },
 

@@ -1,0 +1,130 @@
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">BMS Review Summary</h5>
+      <button
+        type="button"
+        class="close"
+        data-dismiss="modal"
+        aria-label="Close"
+        (click)="close()"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <span
+            >Here's summary of information you have provided for your insurance
+            quote. Please review and confirm the information below.</span
+          >
+        </div>
+      </div>
+      <div class="smallseparator"></div>
+
+      <div class="row">
+        <div class="col-xs-12 col-md-4">
+          <span style="font-weight: bold">Policy Term</span>
+        </div>
+        <div class="col-xs-12 col-md-8">
+          1 Year
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-md-4">
+          <span style="font-weight: bold">Coverage Date</span>
+        </div>
+        <div class="col-xs-12 col-md-8">
+          01-Sep-2019
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-md-4">
+          <span style="font-weight: bold">Address </span>
+        </div>
+        <div class="col-xs-12 col-md-8">
+          20 Duplex Ave, Toronto
+        </div>
+      </div>
+    </div>
+
+    <div class="smallseparator"></div>
+    <div class="row rowpadding">
+      <div class="col-xs-12 col-md-12">
+        <span style="font-weight: bold">Your Information:</span>
+      </div>
+    </div>
+
+    <div class="smallseparator"></div>
+
+    <div class="row  rowpadding">
+      <div class="col-xs-12 col-md-4">
+        <span style="font-weight: bold">Name </span>
+      </div>
+      <div class="col-xs-12 col-md-8">
+        Test test
+      </div>
+    </div>
+
+    <div class="row rowpadding">
+      <div class="col-xs-12 col-md-4">
+        <span style="font-weight: bold">Date of birth </span>
+      </div>
+      <div class="col-xs-12 col-md-8">
+        01-jan-1992
+      </div>
+    </div>
+
+    <div class="row  rowpadding">
+      <div class="col-xs-12 col-md-4">
+        <span style="font-weight: bold">Email Address </span>
+      </div>
+      <div class="col-xs-12 col-md-8">
+        test@test.com
+      </div>
+    </div>
+
+    <div class="row  rowpadding">
+      <div class="col-xs-12 col-md-4">
+        <span style="font-weight: bold">Phone </span>
+      </div>
+      <div class="col-xs-12 col-md-8">
+        416-555-2525
+      </div>
+    </div>
+
+    <div class="row  rowpadding">
+      <div class="col-xs-12 col-md-4">
+        <span style="font-weight: bold">Credit consent </span>
+      </div>
+      <div class="col-xs-12 col-md-8">
+        Yes
+      </div>
+    </div>
+
+    <div class="modal-footer">
+      <button
+        id="btnConfirm"
+        type="button"
+        class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4"
+        (click)="close()"
+      >
+        <a data-dismiss="modal">
+          <small class="text-uppercase font-weight-bold">Close</small>
+        </a>
+      </button>
+
+      <button
+        id="btnConfirm"
+        type="button"
+        class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4"
+      >
+        <a (click)="continue()">
+          <small class="text-uppercase font-weight-bold">Continue</small>
+        </a>
+      </button>
+    </div>
+  </div>
+</div>

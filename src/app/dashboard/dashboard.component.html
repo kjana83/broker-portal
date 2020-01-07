@@ -54,7 +54,7 @@
           &nbsp;&nbsp;Activity List
           <i
             class="fa"
-            [ngClass]="showActivity?'fa-angle-up':'fa-angle-down'"
+            [ngClass]="showActivity ? 'fa-angle-up' : 'fa-angle-down'"
           ></i>
         </h2>
         <!-- <i class="fa fa-compress mr-3  fa-fw"></i> -->
@@ -257,7 +257,7 @@
         id="btnUpdate"
         type="button"
         class="btn btn-style shadow-sm px-4 mb-4"
-        onclick="location.href='./BMSList.html'"
+        (click)="navigateToError()"
       >
         BMS Error List
       </button>
@@ -275,37 +275,16 @@
       >
         Broker Sanctioning Request Summary
       </h2>
-      <div id="chartScantionBroker"></div>
+      <apx-chart
+        [series]="sanctionChart.series"
+        [plotOptions]="sanctionChart.plotOptions"
+        [chart]="sanctionChart.chart"
+        [labels]="sanctionChart.labels"
+        [legend]="sanctionChart.legend"
+        [colors]="sanctionChart.colors"
+        [responsive]="sanctionChart.responsive"
+      ></apx-chart>
     </div>
   </div>
   <!-- End demo content -->
 </div>
-<script>
-  // tell the embed parent frame the height of the content
-  if (window.parent && window.parent.parent) {
-    window.parent.parent.postMessage(
-      [
-        "resultsFrame",
-        {
-          height: document.body.getBoundingClientRect().height,
-          slug: "ko18ravd"
-        }
-      ],
-      "*"
-    );
-  }
-  // always overwrite window.name, in case users try to set it manually
-  window.name = "result";
-  $("#activityList").click(function() {
-    var iangle = $(this).find("i");
-    console.log(iangle);
-    if ($(iangle).hasClass("fa-angle-down")) {
-      $(iangle).removeClass("fa-angle-down");
-      $(iangle).addClass("fa-angle-up");
-    } else {
-      $(iangle).addClass("fa-angle-down");
-      $(iangle).removeClass("fa-angle-up");
-    }
-  });
-</script>
-<script src="https://cdn.jsdelivr.net/npm/apexcharts@latest"></script>
