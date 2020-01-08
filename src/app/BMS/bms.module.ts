@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgApexchartsModule } from 'ng-apexcharts';
 
 import { BMSComponent } from './bms.component';
@@ -15,6 +15,9 @@ import { NavWidgetUWComponent } from '../base/nav-widget-uw.component';
 import { BMSReviewComponent } from './bms-review.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BMSConfirmationComponent } from './bms-confirmation.component';
+import { BMSRequestComponent } from './bms-request.component';
+import { SupportComponent } from '../queue/support.component';
+import { ToastsContainer } from '../base/toast-container.component';
 
 @NgModule({
   declarations: [
@@ -26,17 +29,22 @@ import { BMSConfirmationComponent } from './bms-confirmation.component';
     BmsUpdateComponent,
     ChatComponent,
     BMSReviewComponent,
-    BMSConfirmationComponent
+    BMSConfirmationComponent,
+    BMSRequestComponent,
+    SupportComponent,
+    ToastsContainer
   ],
   imports: [
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     NgbModule,
     BMSRoutingModule,
     NgApexchartsModule
   ],
   entryComponents: [
-    BMSReviewComponent
+    BMSReviewComponent,
+    BMSRequestComponent
   ],
   providers: [],
   bootstrap: [BMSComponent]

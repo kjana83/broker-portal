@@ -1,23 +1,32 @@
-<div class="login-section">  
+<div class="login-section">
   <div class="row h-100">
     <div class="col-sm-12 my-auto login-content">
       <h2 class="pb-3">Login</h2>
       <div class="form-group">
         <label for="username">User name</label>
-        <input type="text" placeholder="Please enter username" class="form-control mt-1" [(ngModel)]="username" required />
+        <input
+          type="text"
+          placeholder="Please enter username"
+          class="form-control mt-1"
+          [(ngModel)]="username"
+          required
+        />
       </div>
       <div class="form-group">
         <label for="password">Password</label>
-        <input type="password" placeholder="Please enter your password"
-               class="form-control"
-               [(ngModel)]="password"
-               required />
+        <input
+          type="password"
+          placeholder="Please enter your password"
+          class="form-control"
+          [(ngModel)]="password"
+          required
+        />
       </div>
       <div class="form-group">
         <label for="username">Role</label>
         <select name="role" [(ngModel)]="role" class="form-control">
           <option value="broker">Broker</option>
-          <option value="csr">CSR</option>
+          <option value="csr">CSE</option>
           <option value="billing">Billing</option>
         </select>
       </div>
@@ -27,5 +36,3 @@
     </div>
   </div>
 </div>
-
-

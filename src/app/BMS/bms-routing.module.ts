@@ -6,6 +6,8 @@ import { BmsErrorListComponent } from './bms-error-list.component';
 import { BmsUpdateComponent } from './bms-update.component';
 import { BMSComponent } from './bms.component';
 import { BMSConfirmationComponent } from './bms-confirmation.component';
+import { BMSRequestComponent } from './bms-request.component';
+import { SupportComponent } from '../queue/support.component';
 
 
 const routes: Routes = [
@@ -25,6 +27,9 @@ const routes: Routes = [
       },
       {
         path: 'bms-confirm', component: BMSConfirmationComponent
+      },
+      {
+        path: 'bms-support', component: SupportComponent
       },
       {
         path: 'bms-update/:quoteNumber', component: BmsUpdateComponent
