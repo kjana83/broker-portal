@@ -296,6 +296,12 @@ body {
   border-bottom: 1px solid #ccc;
 }
 
+.heading-seperator {
+  border-bottom: 1px solid #CCC;
+  padding-bottom: 0.8em;
+  padding-top: 0.8em;
+}
+
 .smallseparator {
   margin: 0.4rem 0;
   color: grey;
@@ -389,9 +395,14 @@ button small {
   border-color: #ffd900;
   line-height: 1.5625em;
   padding: 0.5em 1em;
+  text-transform:uppercase;
 }
 .btn-primary:hover {
   background-color: #001e60;
+  color: #fff;
+}
+.btn-primary:hover a {
+  
   color: #fff;
 }
 
@@ -436,7 +447,7 @@ button small {
 }
 label,
 legend {
-  font-size: 1.25em;
+  font-size: 1em;
   color: #5c596d;
 }
 
@@ -449,6 +460,8 @@ legend {
   border: 2px solid #bd2624;
   border-radius: unset;
   width: 80%;
+  margin-top:2em;
+  margin-bottom:2em;
 }
 
 .form-check {
@@ -465,6 +478,7 @@ legend {
 /* When the radio button is checked, add a blue background */
 .form-check input:checked ~ .form-check-label {
   background-color: #4f9f31;
+  border: 1px solid #444
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
@@ -489,8 +503,8 @@ legend {
   position: absolute;
   top: 0;
   left: 0;
-  height: 25px;
-  width: 25px;
+  height: 26px;
+  width: 26px;
   background-color: #eee;
   border-radius: 50%;
   border: 1px solid #ccc;
@@ -502,6 +516,9 @@ legend {
 
 input[type="text"] {  
   width: 35%;
+  padding:0.5em;
+  font-size:1em;
+  color:#444;
 }
 
 .form-row-field {
@@ -514,22 +531,39 @@ input[type="text"] {
 }
 .nav li:last-child{border-bottom:none;}
 .nav li:hover {
-  background-color: #fff;
+  background-color: #CCC;
 }
 .nav li:hover a {
-  color: #004FB6;
+  color: #444;
 }
-
-
 .nav li a {
-  color: #fff;
+  color: #444;
 }
 .nav {
-  padding: 0.5em 0;
+  //padding: 0.5em 0;
+  background-color: #eee;
+  color: #fff;
+}
+.vertical-nav-uw .nav {
   background-color: #004FB6;
+}
+.vertical-nav-uw .nav li {
+  border-bottom: 1px solid #ccc;
+  color: #444;
+}
+.vertical-nav-uw .nav li:hover {
+  background-color: #fff;
+}
+.vertical-nav-uw .nav li:hover a {
+  color: #004FB6;
+}
+.vertical-nav-uw .nav li a {
   color: #fff;
 }
 .login-details {
+  background-color: #001E60;
+}
+.vertical-nav-uw .login-details {
   background-color: #FFD900;
 }
 
@@ -641,4 +675,40 @@ input[type="text"] {
               
 .chatModalposition{
     left:-3em;
+}
+.media-body{
+    color:#eee;
+}
+.vertical-nav-uw .media-body {
+  color: #001E60;
+}
+.modal-dialog{
+    margin-top:0;
+    margin-bottom:0;
+}
+.modal-header {
+  color: #001E60;
+  font-weight: bold;
+  font-size: 1.5em;
+  background-color: #CCC;
+}
+.modal-title{
+    font-size: 1em;
+    color: #444;
+    }
+.btn-secondary {
+  background-color: #ccc;
+  color: #444;
+  border: 1px solid #CCC;
+  border-radius: 0;
+  padding: 0.5em 1em;
+  text-transform:uppercase;
+  font-weight:bold;
+}
+.btn-secondary:hover {
+  background-color: #444;
+  color: #ccc;
+}
+.btn-secondary:hover a {  
+  color: #ccc;
 }
