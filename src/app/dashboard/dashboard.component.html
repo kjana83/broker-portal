@@ -1,8 +1,9 @@
 <div>
-  <!-- Toggle button -->
-  <h3 class="display-4">Quick Stats</h3>
-  <div class="separator"></div>
-  <div class="row stats-replay-data">
+  <div class="heading-seperator">
+    <h1 class="display-4 dashboard-help">Dashboard</h1>
+  </div>
+  <h2 class="display-5 mb-3 mt-3">Quick Stats</h2>  
+  <div class="row stats-replay-data mt-3">
     <div class="col-xs-12 col-md-2" *ngFor="let stat of stats">
       <div class="card cardbox1">
         <div class="card-body">
@@ -15,10 +16,10 @@
   <div class="separator"></div>
   <div class="row">
     <div class="col-xs-12 col-md-6">
-      <h2 class="display-4">NB Monthly Count</h2>
+      <h2 class="display-5">NB Monthly Count</h2>
     </div>
     <div class="col-xs-6 col-md-4">
-      <h2 class="display-4">Rolling Commission</h2>
+      <h2 class="display-5">Rolling Commission</h2>
     </div>
   </div>
   <div class="row">
@@ -48,7 +49,7 @@
         <h2
           (click)="toggleActivity()"
           id="activityList"
-          class="display-4"
+          class="display-5"
           style="cursor: pointer;"
         >
           &nbsp;&nbsp;Activity List
@@ -236,7 +237,7 @@
         href="#"
         aria-expanded="false"
         aria-controls=""
-        class="display-4"
+        class="display-5"
       >
         BMS Upload Summary
       </h2>
@@ -271,7 +272,7 @@
         href="#"
         aria-expanded="false"
         aria-controls=""
-        class="display-4"
+        class="display-5"
       >
         Broker Sanctioning Request Summary
       </h2>
