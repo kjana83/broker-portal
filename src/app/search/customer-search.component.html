@@ -1,7 +1,7 @@
-<h3 class="display-4 text-black">Customer Search</h3>
+<h3 class="display-4 heading-seperator">Customer Search</h3>
 <form class="form" [formGroup]="customerSearchForm">
-  <div class="form-row">
-    <div class="form-group col-md-6">
+  <div class="form-row-field mt-3">
+    <div class="form-group">
       <label for="uwCompany">Company</label>
       <select
         id="uwCompany"
@@ -12,7 +12,7 @@
         <option>Aviva Insurance Company of Canada</option>
       </select>
     </div>
-    <div class="form-group col-md-6">
+    <div class="form-group">
       <label for="branch">Branch</label>
       <select
         id="branch"
@@ -24,8 +24,8 @@
       </select>
     </div>
   </div>
-  <div class="form-row">
-    <div class="form-group col-md-6">
+  <div class="form-row-field">
+    <div class="form-group">
       <label for="lastName">Last Name</label>
       <input
         type="text"
@@ -34,7 +34,7 @@
         formControlName="lastName"
       />
     </div>
-    <div class="form-group col-md-6">
+    <div class="form-group">
       <label for="postalCode">Postal Code</label>
       <input
         type="text"
@@ -44,8 +44,8 @@
       />
     </div>
   </div>
-  <div class="form-row">
-    <div class="form-group col-md-6">
+  <div class="form-row-field">
+    <div class="form-group">
       <label for="policyNumber">Policy Number</label>
       <input
         type="text"

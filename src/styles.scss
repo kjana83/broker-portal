@@ -62,6 +62,12 @@ h3 {
   line-height: 1.2;
   font-family: "Roboto", sans-serif;
 }
+.display-5 {
+  font-size: 1.5rem !important;
+  font-weight: 500;
+  line-height: 1.2;
+  font-family: "Roboto", sans-serif;
+}
 
 .p-5 {
   padding: 1.5rem !important;
@@ -462,17 +468,18 @@ button small {
 }
 label,
 legend {
-  font-size: 1em;
-  color: #5c596d;
+  font-size:1em;
+  color:  #5c596d;
+  font-weight:bold;
 }
-
+fieldset label{font-weight:normal;}
 .mt-2 {
   margin-top: 2em;
 }
 .alert-light {
   color: #bd2624;
   background-color: #fefefe;
-  border: 2px solid #bd2624;
+  border: 1px solid #bd2624;
   border-radius: unset;
   width: 80%;
   margin-top:2em;
@@ -529,15 +536,24 @@ legend {
   margin-bottom: 0;
 }
 
-input[type="text"] {
-  width: 35%;
-  padding:0.5em;
-  font-size:1em;
-  color:#444;
+input[type="text"], input[type="password"]{
+  padding: 1.5em 1em;
+  font-size: 1em;
+  color: #444;
+  border:1px solid #aaa;
 }
-
+select.form-control {
+  height: 3.125em;
+  border: 1px solid #aaa;
+}
 .form-row-field {
   margin-bottom: 0.5em;
+}
+.form-row-field input[type="text"], .form-row-field select {
+  width: 35%;
+}
+.form-row-field fieldset label{
+    font-size:1em;
 }
 .nav li {
   border-bottom: 1px solid #ccc;
@@ -589,22 +605,22 @@ input[type="text"] {
   background-color: #eee;
 }
 
-.login-section {
+/*.login-section {
   max-width: 500px;
   height: 100%;
   margin: auto;
-}
-.login-section input[type="text"],
+}*/
+/*.login-section input[type="text"],
 .login-section input[type="password"],
 .login-section select {
   width: 75%;
-}
-.login-content {
+}*/
+/*.login-content {
   border: 1px solid #ccc;
   background-color: #e5edf8;
   padding: 1em;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
-}
+}*/
 .chat-window {
   background-color: #fff;
   padding: 1em;
@@ -727,3 +743,10 @@ input[type="text"] {
 .btn-secondary:hover a {  
   color: #ccc;
 }
+
+.form-group{margin-bottom:1.5em;}
+.card a {
+  color: #004FB6;
+  font-weight: bold;
+}
+.dashboard-help{width:40%;}
