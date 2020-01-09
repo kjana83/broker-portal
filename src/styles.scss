@@ -406,6 +406,21 @@ button small {
   color: #fff;
 }
 
+
+.btn-secondary {
+  background-color: #001e60;
+  color: #fff;
+  font-weight: bold;
+  border-radius: unset;
+  border-color: #ffd900;
+  line-height: 1.5625em;
+  padding: 0.5em 1em;
+}
+
+.user {
+  color: #001e60;
+  margin-left: 10px;
+}
 .chatModal {
   .list-group {
     margin-top: 20px;
@@ -514,7 +529,7 @@ legend {
   margin-bottom: 0;
 }
 
-input[type="text"] {  
+input[type="text"] {
   width: 35%;
   padding:0.5em;
   font-size:1em;
@@ -526,10 +541,12 @@ input[type="text"] {
 }
 .nav li {
   border-bottom: 1px solid #ccc;
-  color: #444;  
-  padding:0.5em;
+  color: #444;
+  padding: 0.5em;
 }
-.nav li:last-child{border-bottom:none;}
+.nav li:last-child {
+  border-bottom: none;
+}
 .nav li:hover {
   background-color: #CCC;
 }
@@ -584,7 +601,7 @@ input[type="text"] {
 }
 .login-content {
   border: 1px solid #ccc;
-  background-color: #E5EDF8;
+  background-color: #e5edf8;
   padding: 1em;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
 }
@@ -593,7 +610,7 @@ input[type="text"] {
   padding: 1em;
   border-radius: 0.5em;
   margin-bottom: 1em;
-  font-size:0.8em;
+  font-size: 0.8em;
 }
 .chat-window .input-group {
   align-items: center;
@@ -609,10 +626,8 @@ input[type="text"] {
 
 .chatModal {
   z-index: 999;
-  right:0;
-  width:15em;
-  
-  
+  right: 0;
+  width: 15em;
 }
 
 .blinking {
@@ -672,9 +687,9 @@ input[type="text"] {
     opacity: 1;
   }
 }
-              
-.chatModalposition{
-    left:-3em;
+
+.chatModalposition {
+  left: -3em;
 }
 .media-body{
     color:#eee;

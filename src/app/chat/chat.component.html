@@ -1,51 +1,66 @@
 <div class="row">
-  <div class="offset-8 col-md-12 chatModal {{(chatWithUser && chatWithUser.userName) ? 'chatModalposition' : ''}}">
+  <div
+    class="offset-8 col-md-12 chatModal {{
+      chatWithUser && chatWithUser.userName ? 'chatModalposition' : ''
+    }}"
+  >
     <div class="row">
       <div class="col-md-12 mb-3">
         <ul class="list-group">
-          <li class="list-group-item" *ngFor="let user of users">
+          <li class="list-group-item" *ngFor="let user of filteredUsers">
             <a (click)="startChatWith(user)">
-              <span class="dot" [class.blinking]="user.newMessage"></span>{{ user.userName }}
+              <span class="dot" [class.blinking]="user.newMessage"></span
+              >{{ user.userName }}
             </a>
           </li>
         </ul>
       </div>
     </div>
-    </div>
-    <div class="offset-8 col-md-12 chatModal">
-      <div class="col-md-12 chat-window mt-3"
-           *ngIf="chatWithUser && chatWithUser.userName">
-        <h5 class="font-weight-bold">
-          Chat With {{ chatWithUser.userName.substring(0, 10) + "..." }}
-        </h5>
-        <ul class="list-group">
-          <li class="list-group-item mb-2" *ngFor="let msg of messages">
-            <span *ngIf="!msg.policyNumber"
-                  [class.pull-right]="msg.from === 'me'">{{ msg.message }}</span>
-            <div *ngIf="msg.policyNumber"
-                 class="thumbnail"
-                 (click)="navigateTo(msg.policyData.link)">
-              <div class="caption">
-                <h3>{{ msg.policyNumber }}</h3>
-                <p>{{ msg.policyData.status }}</p>
-              </div>
+  </div>
+  <div class="offset-8 col-md-12 chatModal">
+    <div
+      class="col-md-12 chat-window mt-3"
+      *ngIf="chatWithUser && chatWithUser.userName"
+    >
+      <h5 class="font-weight-bold">
+        Chat With {{ chatWithUser.userName.substring(0, 10) + "..." }}
+      </h5>
+      <ul class="list-group">
+        <li class="list-group-item mb-2" *ngFor="let msg of messages">
+          <span
+            *ngIf="!msg.policyNumber"
+            [class.pull-right]="msg.from === 'me'"
+            >{{ msg.message }}</span
+          >
+          <div
+            *ngIf="msg.policyNumber"
+            class="thumbnail"
+            (click)="navigateTo(msg.policyData.link)"
+          >
+            <div class="caption">
+              <h3>{{ msg.policyNumber }}</h3>
+              <p>{{ msg.policyData.status }}</p>
             </div>
-          </li>
-        </ul>
-        <div class="input-group">
-          <input type="text"
-                 class="form-control"
-                 [(ngModel)]="msgInput"
-                 placeholder="Enter message." />
-          <span class="input-group-btn ml-2">
-            <button class="btn btn-primary"
-                    type="button"
-                    (click)="communicateWithUser(chatWithUser, msgInput)">
-              Send
-            </button>
-          </span>
-        </div>
+          </div>
+        </li>
+      </ul>
+      <div class="input-group">
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="msgInput"
+          placeholder="Enter message."
+        />
+        <span class="input-group-btn ml-2">
+          <button
+            class="btn btn-primary"
+            type="button"
+            (click)="communicateWithUser(chatWithUser, msgInput)"
+          >
+            Send
+          </button>
+        </span>
       </div>
     </div>
   </div>
-
+</div>

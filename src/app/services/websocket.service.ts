@@ -18,7 +18,7 @@ export class WebsocketService {
     this.url = environment.ws_url;
     this.socket = io(this.url);
 
-    this.socket.on('connect', () => {
+    this.socket.on('connect', (socket) => {
       this.userId = this.socket.id;
       console.log(this.socket.id);
     });

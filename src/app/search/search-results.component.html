@@ -1,0 +1,26 @@
+<h3 class="display-4 ">Policy Search Results</h3>
+<div class="row">
+  <div class="col-sm-6" *ngFor="let policy of results">
+    <div class="card">
+      <div class="card-body">
+        <div class="d-flex w-100 justify-content-between card-body-header">
+          <h3 class="mb-1">{{ policy.clientNumber }}</h3>
+          <!-- <small>{{ quote.date }}</small> -->
+        </div>
+        <div class="card-text">
+          <p>
+            <a href="" class="mr-4" *ngFor="let pol of policy.policies">{{
+              pol.policyNumber
+            }}</a>
+          </p>
+          <p>
+            {{ policy.clientName }}
+          </p>
+          <p>
+            {{ policy.address }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

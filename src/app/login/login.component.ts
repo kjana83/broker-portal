@@ -22,6 +22,6 @@ export class LoginComponent {
     this.sessionService.addUser(user);
     (user.role === "broker") ?
       this.router.navigate(['bms/dashboard']) :
-      this.router.navigate(['bms/bms-error']);
+      this.router.navigate(['bms/customer-search']);
   }
 }
