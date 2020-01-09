@@ -1,0 +1,61 @@
+<h3 class="display-4 text-black">Customer Search</h3>
+<form class="form" [formGroup]="customerSearchForm">
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="uwCompany">Company</label>
+      <select
+        id="uwCompany"
+        class="form-control"
+        name="uwCompany"
+        formControlName="company"
+      >
+        <option>Aviva Insurance Company of Canada</option>
+      </select>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="branch">Branch</label>
+      <select
+        id="branch"
+        class="form-control"
+        name="branch"
+        formControlName="branch"
+      >
+        <option>A-10-Ontario</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="lastName">Last Name</label>
+      <input
+        type="text"
+        name="lastName"
+        class="form-control"
+        formControlName="lastName"
+      />
+    </div>
+    <div class="form-group col-md-6">
+      <label for="postalCode">Postal Code</label>
+      <input
+        type="text"
+        name="postalCode"
+        class="form-control"
+        formControlName="postalCode"
+      />
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="policyNumber">Policy Number</label>
+      <input
+        type="text"
+        name="policyNumber"
+        class="form-control"
+        formControlName="policyNumber"
+      />
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary" (click)="submit()">
+    Submit
+  </button>
+</form>

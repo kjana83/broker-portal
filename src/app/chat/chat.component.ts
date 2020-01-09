@@ -5,6 +5,7 @@ import * as _ from 'lodash';
 import { WebsocketService } from '../services/websocket.service';
 import { User } from '../model/user.model';
 import { ChatMessage } from '../model/chatMessage.model';
+import { ChatService } from './chat.service';
 
 @Component({
   selector: 'app-chat',
@@ -12,20 +13,27 @@ import { ChatMessage } from '../model/chatMessage.model';
 })
 export class ChatComponent implements OnInit {
   users: User[] = [];
+  filteredUsers: User[] = [];
   chatWithUser: User;
   messages: any[] = [];
   msgInput: string;
   chatMsgs: ChatMessage[] = [];
   constructor(
     private webSocketService: WebsocketService,
-    private router: Router) {
-
+    private router: Router, private chatService: ChatService) {
+    this.chatService.startAChat().subscribe(user => {
+      this.startChatWith(user);
+    });
   }
 
   ngOnInit() {
     this.webSocketService.listen('message').subscribe((data: any) => {
       if (!this.chatWithUser) this.chatWithUser = new User();
-      // this.chatWithUser.userId = data.from;
+      if (!this.filteredUsers.some(user => { return user.userName === data.userName })) {
+        const user = this.users.find(user => { return user.userName === data.userName });
+        if (user) this.filteredUsers.push(user);
+      }
+      // this.chatWithUser.userId = data.from;˝
       // this.chatWithUser.userName = data.userName;
       // this.messages.push(data);
       let incomingChat = _.find(this.chatMsgs, (val) => {
@@ -56,6 +64,7 @@ export class ChatComponent implements OnInit {
     });
 
     this.webSocketService.listen('users').subscribe((users: any[]) => {
+      console.log(users);
       this.users = users.filter((user) => {
         return user.userId !== this.webSocketService.userId;
       });
@@ -79,6 +88,10 @@ export class ChatComponent implements OnInit {
     });
     if (activeUser) activeUser.newMessage = false;
     console.log(this.chatMsgs);
+    if (!this.filteredUsers.some(usr => { return user.userName === usr.userName })) {
+      const identifiedUser = this.users.find(usr => { return user.userName === usr.userName });
+      if (identifiedUser) this.filteredUsers.push(identifiedUser);
+    }
   }
 
   communicateWithUser(user: User, message: string) {

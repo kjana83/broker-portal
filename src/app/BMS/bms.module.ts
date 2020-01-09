@@ -18,6 +18,8 @@ import { BMSConfirmationComponent } from './bms-confirmation.component';
 import { BMSRequestComponent } from './bms-request.component';
 import { SupportComponent } from '../queue/support.component';
 import { ToastsContainer } from '../base/toast-container.component';
+import { CustomerSearchComponent } from '../search/customer-search.component';
+import { SearchResultsComponent } from '../search/search-results.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { ToastsContainer } from '../base/toast-container.component';
     BMSConfirmationComponent,
     BMSRequestComponent,
     SupportComponent,
-    ToastsContainer
+    ToastsContainer,
+    CustomerSearchComponent,
+    SearchResultsComponent
   ],
   imports: [
     CommonModule,

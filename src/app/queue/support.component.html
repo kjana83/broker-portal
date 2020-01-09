@@ -15,7 +15,9 @@
           <p>
             {{ req.reason }}
           </p>
-          <a class="btn btn-primary">Approve</a>
+          <a (click)="startChat(req.user)" class="btn btn-primary"
+            >Start Chat</a
+          >
           <div
             class="pull-right {{
               req.quote.lob === 'Property' ? 'propertyIcon' : 'autoIcon'
