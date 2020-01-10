@@ -488,7 +488,7 @@ fieldset label {
   margin-bottom: 2em;
 }
 
-.form-check {
+/*.form-check {
   display: block;
   position: relative;
   padding-left: 35px;
@@ -499,20 +499,20 @@ fieldset label {
   -ms-user-select: none;
   user-select: none;
 }
-/* When the radio button is checked, add a blue background */
+
 .form-check input:checked ~ .form-check-label {
   background-color: #4f9f31;
   border: 1px solid #444;
 }
 
-/* Create the indicator (the dot/circle - hidden when not checked) */
+
 .form-check-label:after {
   content: "";
   position: absolute;
   display: none;
 }
 
-/* Show the indicator (dot/circle) when checked */
+
 .form-check input:checked ~ .form-check-label:after {
   display: block;
 }
@@ -522,7 +522,7 @@ fieldset label {
   cursor: pointer;
 }
 
-/* Create a custom radio button */
+
 .form-check-label {
   position: absolute;
   top: 0;
@@ -532,7 +532,56 @@ fieldset label {
   background-color: #eee;
   border-radius: 50%;
   border: 1px solid #ccc;
+}*/
+.radio {
+  display: flex;
+  overflow: hidden;
 }
+
+form-group {
+  margin-bottom: 1em;
+}
+
+.radio input {
+  position: absolute !important;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  width: 1px;
+  border: 0;
+  overflow: hidden;
+}
+
+.radio label {
+  background-color: #eee;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 1em;
+  line-height: 1;
+  text-align: center;
+  padding: 1em;
+  margin-right: -1px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+  transition: all 0.1s ease-in-out;
+}
+
+.radio label:hover {
+  cursor: pointer;
+}
+
+.radio input:checked + label {
+  background-color: #4F9F31;
+  box-shadow: none;
+  color: #fff;
+}
+
+.radio label:first-of-type {
+  border-radius: 4px 0 0 4px;
+}
+
+.radio label:last-of-type {
+  border-radius: 0 4px 4px 0;
+}
+
 
 .alert-light p {
   margin-bottom: 0;
@@ -770,66 +819,3 @@ a {
   cursor: pointer;
 }
 
-.radio {
-  margin: 0.5rem;
-
-  input[type="radio"] {
-    position: absolute;
-    opacity: 0;
-
-    + .radio-label {
-      &:before {
-        content: '';
-        background: $color1;
-        border-radius: 100%;
-        border: 1px solid darken($color1, 25%);
-        display: inline-block;
-        width: 1.4em;
-        height: 1.4em;
-        position: relative;
-        top: -0.2em;
-        margin-right: 1em;
-        vertical-align: top;
-        cursor: pointer;
-        text-align: center;
-        transition: all 250ms ease;
-      }
-    }
-
-    &:checked {
-      + .radio-label {
-        &:before {
-          background-color: $color2;
-          box-shadow: inset 0 0 0 4px $color1;
-        }
-      }
-    }
-
-    &:focus {
-      + .radio-label {
-        &:before {
-          outline: none;
-          border-color: $color2;
-        }
-      }
-    }
-
-    &:disabled {
-      + .radio-label {
-        &:before {
-          box-shadow: inset 0 0 0 4px $color1;
-          border-color: darken($color1, 25%);
-          background: darken($color1, 25%);
-        }
-      }
-    }
-
-    + .radio-label {
-      &:empty {
-        &:before {
-          margin-right: 0;
-        }
-      }
-    }
-  }
-}
