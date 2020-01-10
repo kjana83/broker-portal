@@ -3,191 +3,319 @@
 
 <head>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-    crossorigin="anonymous">
+        crossorigin="anonymous">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
 
-<style>
-  * {
-    box-sizing: border-box;
-  }
 
-  body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-
-  .header {
-    overflow: hidden;
-    background-color: #ADEFD1FF;
-    padding: 20px 10px;
-  }
-
-  .header a {
-    float: left;
-    color: black;
-    text-align: center;
-    padding: 12px;
-    text-decoration: none;
-    font-size: 18px;
-    line-height: 25px;
-    border-radius: 4px;
-  }
-
-  .header a.logo {
-    font-size: 25px;
-    font-weight: bold;
-  }
-
-  .header a:hover {
-    background-color: #00203FFF;
-    color: white;
-  }
-
-  .header a.active {
-    background-color: #00203FFF;
-    color: white;
-  }
-
-  .header-right {
-    float: right;
-  }
-
-  @media screen and (max-width: 500px) {
-    .header a {
-      float: none;
-      display: block;
-      text-align: left;
+  <style>
+    h1 {
+      font-size: 2em;
     }
+
+    .radio {
+      display: flex;
+      overflow: hidden;
+    }
+
+    form-group {
+      margin-bottom: 1em;
+    }
+
+    .radio input {
+      position: absolute !important;
+      clip: rect(0, 0, 0, 0);
+      height: 1px;
+      width: 1px;
+      border: 0;
+      overflow: hidden;
+    }
+
+    .radio label {
+      background-color: #eee;
+      color: rgba(0, 0, 0, 0.6);
+      font-size: 1em;
+      line-height: 1;
+      text-align: center;
+      padding: 1em;
+      margin-right: -1px;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+      transition: all 0.1s ease-in-out;
+    }
+
+      .radio label:hover {
+        cursor: pointer;
+      }
+
+    .radio input:checked + label {
+      background-color: #004FB6;
+      box-shadow: none;
+      color: #fff;
+    }
+
+    .radio label:first-of-type {
+      border-radius: 4px 0 0 4px;
+    }
+
+    .radio label:last-of-type {
+      border-radius: 0 4px 4px 0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1em;
+      color: #444;
+    }
+
+    .header {
+      overflow: hidden;
+      background-color: #409AA8;
+      padding: 1.5em;
+    }
+
+      .header a {
+        float: left;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        font-size: 18px;
+        line-height: 25px;
+        border-radius: 4px;
+        margin-right: 1em;
+      }
+
+        .header a.logo {
+          font-size: 1.5em;
+          font-weight: bold;
+        }
+
+        .header a:hover {
+          color: white;
+        }
+
+        .header a.active {
+          color: white;
+        }
 
     .header-right {
-      float: none;
+      float: right;
     }
-  }
-</style>
 
+    label, legend {
+      font-size: 1em;
+      font-weight: bold;
+      color: #444;
+    }
+
+    input[type="text"], input[type="date"] {
+      width: 40%;
+      padding: 1.25em;
+      border: 1px solid #ccc;
+    }
+    select{
+        padding:0.8em;
+    }
+    @media screen and (max-width: 500px) {
+      .header a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+
+      .header-right {
+        float: none;
+      }
+    }
+    .btn-primary {
+      font-size: 1em;
+      margin-right: 2em;
+      background-color: #4F9F31;
+      color: #fff;
+      border-color: #4F9F31;
+      min-width: 9em;
+      padding: 0.5em;
+    }
+
+    .btn-secondary {
+      font-size: 1em;
+      margin-right: 2em;
+      background-color: #ccc;
+      color: #444;
+      border-color: #ccc;
+      min-width: 9em;
+      padding: 0.5em;
+    }
+  </style>
+</head>
 <body>
-  <div class="container">
-    <div class="header">
-      <a href="#default" class="logo">BMSLogo</a>
-      <div class="header-right">
-        <a class="active" href="#home">Home</a>
-        <a href="#about">logout</a>
-      </div>
+  <div class="header pl-5 pt-3 pb-3 pr-5">
+    <a href="#default" class="logo">BMSLogo</a>
+    <div class="header-right">
+      <a class="active" href="#home">Home</a>
+      <a href="#about">Logout</a>
     </div>
+  </div>
+  <div class="ml-5">
 
-    <section>
-      <div class="page-header">
-        <h2 class="mt-3">
-          Vehicle Information
-        </h2>
-      </div>
-    </section>
+
+
+    <h1 class="mt-3 mb-3">
+      Vehicle Information
+    </h1>
+
     <section>
       <form name="driverForm">
-        <div class="form-group row">
-          <label class="col-sm-12 col-md-12">Year Make Model</label>
-          <div class="col-sm-12 col-md-12">
-            <input type="text">
+        <div class="form-group">
+          <label>Year Make Model</label>
+          <div>
+            <input type="text" class="form-control">
           </div>
         </div>
-        <div class="form-group row">
-          <label class="col-sm-4 col-md-3">Vehicle Purchase date:</label>
-          <div class="col-sm-6 col-md-3">
-            <input type="text">
+        <div class="form-group">
+          <label>Vehicle Purchase date:</label>
+          <div>
+            <input type="date" class="form-control">
           </div>
-          <div class="col-sm-6 col-md-3">
-            <input type="text">
-          </div>
+          <!--<div>
+            <input type="text" class="form-control">
+          </div>-->
         </div>
-        <div class="form-group row">
-          <label class="col-sm-4 col-md-3">Install Winter tire:</label>
-          <div class="col-sm-8 col-md-4">
-            <div class="btn-group" role="group" aria-label="Basic example">
-              <button type="button" class="btn btn-secondary">Yes</button>
-              <button type="button" class="btn btn-secondary">No</button>
-            </div>
-          </div>
-        </div>
-        <div class="form-group row">
-          <label class="col-sm-4 col-md-3">Primary use:</label>
-          <div class="col-sm-8 col-md-9">
-            <div class="btn-group" role="group" aria-label="Basic example">
-              <button type="button" class="btn btn-secondary">Personal</button>
-              <button type="button" class="btn btn-secondary">Business</button>
-            </div>
-          </div>
-        </div>
-        <div class="form-group row">
-          <label class="col-sm-4 col-md-3">Daily commute (one-way):</label>
-          <div class="col-sm-8 col-md-9">
-            <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                aria-expanded="false">
-                Please Select
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Less then 10 Kms</a>
-                <a class="dropdown-item" href="#">10 Kms</a>
-                <a class="dropdown-item" href="#">15 Kms</a>
-                <a class="dropdown-item" href="#">20 Kms</a>
-                <a class="dropdown-item" href="#">25 Kms</a>
-                <a class="dropdown-item" href="#">30 Kms</a>
-                <a class="dropdown-item" href="#">40 Kms</a>
-                <a class="dropdown-item" href="#">50 Kms</a>
-                <a class="dropdown-item" href="#">More then 50 Kms</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="form-group row">
-          <label class="col-sm-4 col-md-3">Comprehensive deductible:</label>
-          <div class="col-sm-8 col-md-9">
-            <div class="btn-group" role="group" aria-label="Basic example">
-              <button type="button" class="btn btn-secondary">$ 200</button>
-              <button type="button" class="btn btn-secondary">$ 300</button>
-              <button type="button" class="btn btn-secondary">$ 500</button>
-              <button type="button" class="btn btn-secondary">$ 1000</button>
-              <button type="button" class="btn btn-secondary">Not Required</button>
-            </div>
-          </div>
-        </div>
-        <!-- </div> -->
-        <div class="form-group row">
-          <label class="col-sm-4 col-md-3">Collision deductible:</label>
-          <div class="col-sm-8 col-md-9">
-            <div class="btn-group" role="group" aria-label="Basic example">
-              <button type="button" class="btn btn-secondary">$ 500</button>
-              <button type="button" class="btn btn-secondary">$ 1000</button>
-              <button type="button" class="btn btn-secondary">$ 1500</button>
-            </div>
-          </div>
-        </div>
-        <div class="form-group row">
-          <label class="col-sm-4 col-md-3">Liability:</label>
-          <div class="col-sm-8 col-md-9">
-            <div class="btn-group" role="group" aria-label="Basic example">
-              <button type="button" class="btn btn-secondary">$ 1 million</button>
-              <button type="button" class="btn btn-secondary">$ 2 million</button>
-            </div>
-          </div>
-        </div>
-        <div class="form-group row">
-          <div class="col-sm-8 col-md-4">
+        <fieldset class="form-group">
+          <legend>Install Winter tire:</legend>
+          <div class="radio">
+            <input id="InstallWinterTireYes" name="InstallWinterTire" type="radio" checked>
+            <label for="InstallWinterTireYes" class="radio-label">Yes</label>
 
+            <input id="InstallWinterTireNo" name="InstallWinterTire" type="radio">
+            <label for="InstallWinterTireNo" class="radio-label">No</label>
+            <!--<div class="btn-group" role="group" aria-label="Basic example">
+
+        <button type="button" class="btn btn-secondary">Yes</button>
+        <button type="button" class="btn btn-secondary">No</button>
+      </div>-->
+          </div>
+        </fieldset>
+        <fieldset class="form-group">
+          <legend>Primary use:</legend>
+          <div class="radio">
+            <input id="primaryUsePersonal" name="primaryUse" type="radio" checked>
+            <label for="primaryUsePersonal" class="radio-label">Personal</label>
+
+            <input id="primaryUseBusiness" name="primaryUse" type="radio">
+            <label for="primaryUseBusiness" class="radio-label">Business</label>
+          </div>
+        </fieldset>
+        <div class="form-group">
+          <label>Daily commute (one-way):</label>
+          <div>
+            <select id="">
+              <option>Less then 10 Kms</option>
+              <option>10 Kms</option>
+              <option>15 Kms</option>
+              <option>20 Kms</option>
+              <option>25 Kms</option>
+              <option>30 Kms</option>
+              <option>40 Kms</option>
+              <option>50 Kms</option>
+              <option>More than 50 Kms</option>
+            </select>
+          </div>
+        </div>
+        <!--<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+      Please Select
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="#">Less then 10 Kms</a>
+      <a class="dropdown-item" href="#">10 Kms</a>
+      <a class="dropdown-item" href="#">15 Kms</a>
+      <a class="dropdown-item" href="#">20 Kms</a>
+      <a class="dropdown-item" href="#">25 Kms</a>
+      <a class="dropdown-item" href="#">30 Kms</a>
+      <a class="dropdown-item" href="#">40 Kms</a>
+      <a class="dropdown-item" href="#">50 Kms</a>
+      <a class="dropdown-item" href="#">More then 50 Kms</a>
+    </div>-->
+
+        <div class="form-group">
+          <label>Comprehensive deductible:</label>
+          <div>
+            <select id="">
+              <option>Less then 10 Kms</option>
+              <option>$200</option>
+              <option>$300</option>
+              <option>$500</option>
+              <option>$1000</option>
+              <option>Not required</option>
+            </select>
+          </div>
+        </div>
+        <!--<div class="form-group row">
+    <label class="col-sm-4 col-md-3">Comprehensive deductible:</label>
+    <div class="col-sm-8 col-md-9">
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-secondary">$ 200</button>
+        <button type="button" class="btn btn-secondary">$ 300</button>
+        <button type="button" class="btn btn-secondary">$ 500</button>
+        <button type="button" class="btn btn-secondary">$ 1000</button>
+        <button type="button" class="btn btn-secondary">Not Required</button>
+      </div>
+    </div>
+  </div>-->
+        <!-- </div> -->
+        <fieldset class="form-group">
+          <legend> Collision deductible:</legend>
+          <div class="radio">
+            
+              <input id="collisionDeductible1" name="collisionDeductible" type="radio" checked>
+              <label for="collisionDeductible1" class="radio-label">$500</label>
+              <input id="collisionDeductible2" name="collisionDeductible" type="radio">
+              <label for="collisionDeductible2" class="radio-label">$1000</label>
+              <input id="collisionDeductible2" name="collisionDeductible" type="radio">
+              <label for="collisionDeductible2" class="radio-label">$1500</label>
+
+            </div>
+            <!--<div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-secondary">$ 500</button>
+        <button type="button" class="btn btn-secondary">$ 1000</button>
+        <button type="button" class="btn btn-secondary">$ 1500</button>
+      </div>-->
+         
+        </fieldset>
+        <fieldset class="form-group">
+          <legend>Liability:</legend>
+          <div class="radio">
+            <input id="Liability1" name="Liability" type="radio">
+            <label for="Liability1" class="radio-label">$ 1 million</label>
+            <input id="Liability2" name="Liability" type="radio">
+            <label for="Liability2" class="radio-label">$ 2 million</label>
+            <!--<div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-secondary">$ 1 million</button>
+        <button type="button" class="btn btn-secondary">$ 2 million</button>
+      </div>-->
+          </div>
+        </fieldset>
+        <div class="form-group row">
+          <div class="col-sm-8 col-md-4">
             <a class="btn btn-primary" href="Driver.html" role="button">Next</a>
           </div>
         </div>
       </form>
-    </section>
-  </div>
+        </section>
+  
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script>
+          crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
+          crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-    crossorigin="anonymous"></script>
+          crossorigin="anonymous"></script>
 </body>
 
 </html>
