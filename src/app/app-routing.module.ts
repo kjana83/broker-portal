@@ -11,6 +11,9 @@ const routes: Routes = [
   },
   {
     path: 'bms', loadChildren: "./BMS/bms.module#BMSModule"
+  },
+  {
+    path: 'quote', loadChildren: "./quote/quote.module#QuoteModule"
   }
 ];
 
