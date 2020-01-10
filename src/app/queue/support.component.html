@@ -4,13 +4,15 @@
     <div class="card">
       <div class="card-body">
         <div class="d-flex w-100 justify-content-between card-body-header">
-          <h3 class="mb-1">{{ req.quote.quoteNumber }}</h3>
+          <h3 style="cursor: pointer;" class="mb-1" (click)="open()">
+            {{ req.quote.quoteNumber }}
+          </h3>
           <small>{{ req.date }}</small>
         </div>
         <div class="card-text">
           <p>
-            <label class="user">{{ req.user.userName }}</label>
-            <label class="branch"> {{ req.branch }} </label>
+            <label class="user">User: &nbsp; {{ req.user.userName }}</label>
+            <label class="branch"> Branch: &nbsp; {{ req.branch }} </label>
           </p>
           <p>
             {{ req.reason }}
