@@ -3,8 +3,8 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'bms-review',
-  templateUrl: './bms-review.component.html'
+  selector: 'quote-error',
+  templateUrl: './quote-error.component.html'
 })
 export class QuoteErrorComponent {
   constructor(private activeModel: NgbActiveModal, private router: Router) { }
