@@ -1,0 +1,168 @@
+h1 {
+  font-size: 2em;
+}
+.radio {
+  display: flex;
+  overflow: hidden;
+}
+form-group {
+  margin-bottom: 1em;
+}
+.radio input {
+  position: absolute !important;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  width: 1px;
+  border: 0;
+  overflow: hidden;
+}
+
+.radio label {
+  background-color: #eee;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 1em;
+  line-height: 1;
+  text-align: center;
+  padding: 1em;
+  margin-right: -1px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+  transition: all 0.1s ease-in-out;
+}
+
+.radio label:hover {
+  cursor: pointer;
+}
+
+.radio input:checked + label {
+  background-color: #004fb6;
+  box-shadow: none;
+  color: #fff;
+}
+
+.radio label:first-of-type {
+  border-radius: 4px 0 0 4px;
+}
+
+.radio label:last-of-type {
+  border-radius: 0 4px 4px 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  color: #444;
+}
+
+.header {
+  overflow: hidden;
+  background-color: #409aa8;
+  padding: 1.5em;
+}
+
+.header a {
+  float: left;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+  margin-right: 1em;
+}
+
+.header a.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.header a:hover {
+  color: white;
+}
+
+.header a.active {
+  color: white;
+}
+
+.header-right {
+  float: right;
+}
+
+label,
+legend {
+  font-size: 1em;
+  font-weight: bold;
+  color: #444;
+}
+
+input[type="text"],
+input[type="date"] {
+  width: 40%;
+  padding: 1.25em;
+  border: 1px solid #ccc;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .header-right {
+    float: none;
+  }
+}
+
+.btn-primary {
+  font-size: 1em;
+  margin-right: 2em;
+  background-color: #4f9f31;
+  color: #fff;
+  border-color: #4f9f31;
+  min-width: 9em;
+  padding: 0.5em;
+}
+.btn-secondary {
+  font-size: 1em;
+  margin-right: 2em;
+  background-color: #ccc;
+  color: #444;
+  border-color: #ccc;
+  min-width: 9em;
+  padding: 0.5em;
+}
+.container {
+  max-width: 80em;
+  margin: auto;
+}
+
+.card-body {
+  flex: 1 1 auto;
+  padding: 0;
+}
+.card-body-header {
+  background-color: #413e45;
+  color: #fff;
+  padding: 0.5em 1em;
+}
+.container {
+  max-width: 80em;
+  margin: auto;
+}
+.header {
+  padding: 2em 3.65em 2em 3.65em;
+}
+.card-text {
+  padding: 1em;
+}
+
+.modal-header {
+  background-color: #ffa000;
+  color: #444;
+}

@@ -1,22 +1,22 @@
 <h3 class="display-4 heading-seperator">Customer Search</h3>
 <form class="form" [formGroup]="customerSearchForm">
-  <div class="form-row-field mt-3">
-    <div class="form-group">
+  <div class="form-row mt-3">
+    <div class="form-group col-md-6">
       <label for="uwCompany">Company</label>
       <select
         id="uwCompany"
-        class="form-control"
+        class="form-control col-md-10"
         name="uwCompany"
         formControlName="company"
       >
         <option>Aviva Insurance Company of Canada</option>
       </select>
     </div>
-    <div class="form-group">
+    <div class="form-group col-md-6">
       <label for="branch">Branch</label>
       <select
         id="branch"
-        class="form-control"
+        class="form-control col-md-10"
         name="branch"
         formControlName="branch"
       >
@@ -24,33 +24,33 @@
       </select>
     </div>
   </div>
-  <div class="form-row-field">
-    <div class="form-group">
+  <div class="form-row">
+    <div class="form-group col-md-6">
       <label for="lastName">Last Name</label>
       <input
         type="text"
         name="lastName"
-        class="form-control"
+        class="form-control col-md-10"
         formControlName="lastName"
       />
     </div>
-    <div class="form-group">
+    <div class="form-group col-md-6">
       <label for="postalCode">Postal Code</label>
       <input
         type="text"
         name="postalCode"
-        class="form-control"
+        class="form-control col-md-10"
         formControlName="postalCode"
       />
     </div>
   </div>
-  <div class="form-row-field">
-    <div class="form-group">
+  <div class="form-row">
+    <div class="form-group col-md-6">
       <label for="policyNumber">Policy Number</label>
       <input
         type="text"
         name="policyNumber"
-        class="form-control"
+        class="form-control col-md-10"
         formControlName="policyNumber"
       />
     </div>

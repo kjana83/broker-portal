@@ -4,7 +4,8 @@ import { QuoteErrorComponent } from './quote-error.component';
 
 @Component({
   selector: 'summary',
-  templateUrl: './summary.component.html'
+  templateUrl: './summary.component.html',
+  styleUrls: ['./style.scss']
 })
 export class SummaryComponent {
   constructor(private modalService: NgbModal) { }

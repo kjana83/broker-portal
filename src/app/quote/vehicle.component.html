@@ -1,109 +1,148 @@
-<section>
-  <div class="page-header">
-    <h2 class="mt-3">
-      Vehicle Information
-    </h2>
-  </div>
-</section>
-<section>
-  <form name="driverForm">
-    <div class="form-group row">
-      <label class="col-sm-12 col-md-12">Year Make Model</label>
-      <div class="col-sm-12 col-md-12">
-        <input type="text" />
-      </div>
-    </div>
-    <div class="form-group row">
-      <label class="col-sm-4 col-md-3">Vehicle Purchase date:</label>
-      <div class="col-sm-6 col-md-3">
-        <input type="text" />
-      </div>
-      <div class="col-sm-6 col-md-3">
-        <input type="text" />
-      </div>
-    </div>
-    <div class="form-group row">
-      <label class="col-sm-4 col-md-3">Install Winter tire:</label>
-      <div class="col-sm-8 col-md-4">
-        <div class="btn-group" role="group" aria-label="Basic example">
-          <button type="button" class="btn btn-secondary">Yes</button>
-          <button type="button" class="btn btn-secondary">No</button>
+<div class="container">
+  <h1 class="mt-3 mb-3">
+    Vehicle Information
+  </h1>
+
+  <section>
+    <form name="driverForm">
+      <div class="form-group">
+        <label>Year Make Model</label>
+        <div>
+          <input type="text" class="form-control" />
         </div>
       </div>
-    </div>
-    <div class="form-group row">
-      <label class="col-sm-4 col-md-3">Primary use:</label>
-      <div class="col-sm-8 col-md-9">
-        <div class="btn-group" role="group" aria-label="Basic example">
-          <button type="button" class="btn btn-secondary">Personal</button>
-          <button type="button" class="btn btn-secondary">Business</button>
+      <div class="form-group">
+        <label>Vehicle Purchase date:</label>
+        <div>
+          <input type="date" class="form-control" />
+        </div>
+        <!--<div>
+            <input type="text" class="form-control">
+          </div>-->
+      </div>
+      <fieldset class="form-group">
+        <legend>Install Winter tire:</legend>
+        <div class="radio">
+          <input
+            id="InstallWinterTireYes"
+            name="InstallWinterTire"
+            type="radio"
+            checked
+          />
+          <label for="InstallWinterTireYes" class="radio-label">Yes</label>
+
+          <input
+            id="InstallWinterTireNo"
+            name="InstallWinterTire"
+            type="radio"
+          />
+          <label for="InstallWinterTireNo" class="radio-label">No</label>
+          <!--<div class="btn-group" role="group" aria-label="Basic example">
+
+        <button type="button" class="btn btn-secondary">Yes</button>
+        <button type="button" class="btn btn-secondary">No</button>
+      </div>-->
+        </div>
+      </fieldset>
+      <fieldset class="form-group">
+        <legend>Primary use:</legend>
+        <div class="radio">
+          <input
+            id="primaryUsePersonal"
+            name="primaryUse"
+            type="radio"
+            checked
+          />
+          <label for="primaryUsePersonal" class="radio-label">Personal</label>
+
+          <input id="primaryUseBusiness" name="primaryUse" type="radio" />
+          <label for="primaryUseBusiness" class="radio-label">Business</label>
+        </div>
+      </fieldset>
+      <div class="form-group">
+        <label>Daily commute (one-way):</label>
+        <div>
+          <select id="">
+            <option>Less then 10 Kms</option>
+            <option>10 Kms</option>
+            <option>15 Kms</option>
+            <option>20 Kms</option>
+            <option>25 Kms</option>
+            <option>30 Kms</option>
+            <option>40 Kms</option>
+            <option>50 Kms</option>
+            <option>More than 50 Kms</option>
+          </select>
         </div>
       </div>
-    </div>
-    <div class="form-group row">
-      <label class="col-sm-4 col-md-3">Daily commute (one-way):</label>
-      <div class="col-sm-8 col-md-9">
-        <div class="dropdown">
-          <button
-            class="btn btn-secondary dropdown-toggle"
-            type="button"
-            id="dropdownMenuButton"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
+
+      <div class="form-group">
+        <label>Comprehensive deductible:</label>
+        <div>
+          <select id="">
+            <option>Less then 10 Kms</option>
+            <option>$200</option>
+            <option>$300</option>
+            <option>$500</option>
+            <option>$1000</option>
+            <option>Not required</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- </div> -->
+      <fieldset class="form-group">
+        <legend>Collision deductible:</legend>
+        <div class="radio">
+          <input
+            id="collisionDeductible1"
+            name="collisionDeductible"
+            type="radio"
+            checked
+          />
+          <label for="collisionDeductible1" class="radio-label">$500</label>
+          <input
+            id="collisionDeductible2"
+            name="collisionDeductible"
+            type="radio"
+          />
+          <label for="collisionDeductible2" class="radio-label">$1000</label>
+          <input
+            id="collisionDeductible2"
+            name="collisionDeductible"
+            type="radio"
+          />
+          <label for="collisionDeductible2" class="radio-label">$1500</label>
+        </div>
+        <!--<div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-secondary">$ 500</button>
+        <button type="button" class="btn btn-secondary">$ 1000</button>
+        <button type="button" class="btn btn-secondary">$ 1500</button>
+      </div>-->
+      </fieldset>
+      <fieldset class="form-group">
+        <legend>Liability:</legend>
+        <div class="radio">
+          <input id="Liability1" name="Liability" type="radio" />
+          <label for="Liability1" class="radio-label">$ 1 million</label>
+          <input id="Liability2" name="Liability" type="radio" />
+          <label for="Liability2" class="radio-label">$ 2 million</label>
+          <!--<div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-secondary">$ 1 million</button>
+        <button type="button" class="btn btn-secondary">$ 2 million</button>
+      </div>-->
+        </div>
+      </fieldset>
+      <div class="form-group row">
+        <div class="col-sm-8 col-md-4">
+          <a
+            class="btn btn-primary"
+            [routerLink]="['/quote/driver']"
+            role="button"
+            >Next</a
           >
-            Please Select
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Less then 10 Kms</a>
-            <a class="dropdown-item" href="#">10 Kms</a>
-            <a class="dropdown-item" href="#">15 Kms</a>
-            <a class="dropdown-item" href="#">20 Kms</a>
-            <a class="dropdown-item" href="#">25 Kms</a>
-            <a class="dropdown-item" href="#">30 Kms</a>
-            <a class="dropdown-item" href="#">40 Kms</a>
-            <a class="dropdown-item" href="#">50 Kms</a>
-            <a class="dropdown-item" href="#">More then 50 Kms</a>
-          </div>
         </div>
       </div>
-    </div>
-    <div class="form-group row">
-      <label class="col-sm-4 col-md-3">Comprehensive deductible:</label>
-      <div class="col-sm-8 col-md-9">
-        <div class="btn-group" role="group" aria-label="Basic example">
-          <button type="button" class="btn btn-secondary">$ 200</button>
-          <button type="button" class="btn btn-secondary">$ 300</button>
-          <button type="button" class="btn btn-secondary">$ 500</button>
-          <button type="button" class="btn btn-secondary">$ 1000</button>
-          <button type="button" class="btn btn-secondary">Not Required</button>
-        </div>
-      </div>
-    </div>
-    <!-- </div> -->
-    <div class="form-group row">
-      <label class="col-sm-4 col-md-3">Collision deductible:</label>
-      <div class="col-sm-8 col-md-9">
-        <div class="btn-group" role="group" aria-label="Basic example">
-          <button type="button" class="btn btn-secondary">$ 500</button>
-          <button type="button" class="btn btn-secondary">$ 1000</button>
-          <button type="button" class="btn btn-secondary">$ 1500</button>
-        </div>
-      </div>
-    </div>
-    <div class="form-group row">
-      <label class="col-sm-4 col-md-3">Liability:</label>
-      <div class="col-sm-8 col-md-9">
-        <div class="btn-group" role="group" aria-label="Basic example">
-          <button type="button" class="btn btn-secondary">$ 1 million</button>
-          <button type="button" class="btn btn-secondary">$ 2 million</button>
-        </div>
-      </div>
-    </div>
-    <div class="form-group row">
-      <div class="col-sm-8 col-md-4">
-        <a class="btn btn-primary" href="/quote/driver" role="button">Next</a>
-      </div>
-    </div>
-  </form>
-</section>
+    </form>
+  </section>
+</div>

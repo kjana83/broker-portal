@@ -9,6 +9,7 @@
         class="mr-3 rounded-circle img-thumbnail shadow-sm"
       />
       <div class="media-body">
+        <small>{{ sessionService.currentUser.userName }}</small>
         <h4 class="m-0">Hub Brokerage</h4>
         <p class="font-weight-light mb-0">GTA-East Branch</p>
       </div>
@@ -38,11 +39,17 @@
         Sanction broker user
       </a>
     </li>
+    <li class="nav-item">
+      <a [routerLink]="['/bms/customer-search']" class="nav-link">
+        <i class="fa fa-search mr-3  fa-fw"></i>
+        Customer Search
+      </a>
+    </li>
 
     <li class="nav-item">
       <a [routerLink]="['/bms/bms-error']" class="nav-link">
         <i class="fa fa-list mr-3  fa-fw"></i>
-        BMS Error List
+        BMS NB Upload
       </a>
     </li>
     <li class="nav-item">
@@ -61,12 +68,6 @@
       <a class="nav-link">
         <i class="fa fa-picture-o mr-3  fa-fw"></i>
         Documents
-      </a>
-    </li>
-    <li class="nav-item">
-      <a href="/quote" class="nav-link">
-        <i class="fa fa-picture-o mr-3  fa-fw"></i>
-        Quote
       </a>
     </li>
   </ul>
