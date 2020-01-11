@@ -17,8 +17,8 @@
           <p>
             {{ req.reason }}
           </p>
-          <a (click)="startChat(req.user)" class="btn btn-primary"
-            >Start Chat</a
+          <a (click)="startChat(req" class="btn btn-primary"
+            >{{req.chatStatusLabel}}</a
           >
           <div
             class="pull-right {{

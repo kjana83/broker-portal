@@ -1,6 +1,8 @@
 import { Component } from "@angular/core";
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { QuoteErrorComponent } from './quote-error.component';
+import { SessionService } from '../services/session.service';
+
 
 @Component({
   selector: 'summary',
@@ -8,8 +10,11 @@ import { QuoteErrorComponent } from './quote-error.component';
   styleUrls: ['./style.scss']
 })
 export class SummaryComponent {
-  constructor(private modalService: NgbModal) { }
+  quotes: [];
+  constructor(private modalService: NgbModal,
+    public sessionService: SessionService) {
 
+  }
   open() {
     this.modalService.open(QuoteErrorComponent);
   }

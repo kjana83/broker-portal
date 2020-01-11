@@ -14,6 +14,7 @@ export class BmsUpdateComponent implements OnInit {
   quotes: Quote[] = [];
   quote: Quote;
   title: string;
+  isChatInitiated = false;
   @ViewChild('bmsReview', { static: false }) bmsReviewComponent: BMSReviewComponent;
 
   constructor(private activatedRoute: ActivatedRoute,
@@ -43,5 +44,6 @@ export class BmsUpdateComponent implements OnInit {
 
     const modalRef = this.modalService.open(BMSRequestComponent);
     modalRef.componentInstance.quote = this.quote;
+    this.isChatInitiated = true;
   }
 }

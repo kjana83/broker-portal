@@ -10,13 +10,14 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
   templateUrl: './support.component.html'
 })
 export class SupportComponent {
-
+  chatStatusLabel
   constructor(public sessionService: SessionService,
     private chatService: ChatService,
     private modalService: NgbModal) { }
 
-  startChat(user: User) {
-    this.chatService.initChat(user);
+  startChat(req) {
+    this.chatService.initChat(req.User);
+    req.statusLabel = 'Chat Started';
   }
 
 

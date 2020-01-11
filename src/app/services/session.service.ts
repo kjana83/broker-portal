@@ -16,6 +16,7 @@ export class SessionService {
         classname: 'bg-success text-light',
         delay: 10000
       });
+      data.statusLabel = 'Accept Chat';
       this.supportList.push(data);
     });
   }
