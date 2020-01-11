@@ -16,7 +16,7 @@ export class SupportComponent {
     private modalService: NgbModal) { }
 
   startChat(req) {
-    this.chatService.initChat(req.User);
+    this.chatService.initChat(req.user);
     req.statusLabel = 'Chat Started';
   }
 

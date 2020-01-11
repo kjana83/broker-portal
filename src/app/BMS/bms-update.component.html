@@ -32,13 +32,13 @@
   <fieldset class="form-row-field">
     <legend>Do you currently have home insurance?</legend>
     <div class="radio">
-      <input id="inlineRadio1" name="gender" type="radio" checked>
+      <input id="inlineRadio1" name="gender" type="radio" checked />
       <label for="inlineRadio1" class="radio-label">Yes</label>
 
-      <input id="inlineRadio2" name="gender" type="radio">
+      <input id="inlineRadio2" name="gender" type="radio" />
       <label for="inlineRadio2" class="radio-label">No</label>
-      </div>
-      <!--<label class="form-check">
+    </div>
+    <!--<label class="form-check">
         Yes
         <input class="form-check-input"
                type="radio"
@@ -56,7 +56,7 @@
                value="option2" />
         <span class="form-check-label"></span>
       </label>-->
-</fieldset>
+  </fieldset>
 
   <div class="form-row-field">
     <label for="no_of_claims"
@@ -84,15 +84,11 @@
   <fieldset class="form-row-field">
     <legend>How many major convictions you had in last 3 years?</legend>
     <div class="radio">
-      <input id="noofconvictions1" name="noofconvictions" type="radio">
+      <input id="noofconvictions1" name="noofconvictions" type="radio" />
       <label for="noofconvictions1" class="radio-label">None</label>
 
-      
-
-      <input id="noofconvictions2" name="noofconvictions" type="radio">
+      <input id="noofconvictions2" name="noofconvictions" type="radio" />
       <label for="noofconvictions2" class="radio-label">1 or more</label>
-
-
     </div>
     <!--<label class="form-check">
       None
@@ -117,23 +113,40 @@
   <fieldset class="form-row-field">
     <legend>How many minor convictions you had in last 3 years?</legend>
     <div class="radio">
-      <input id="noofminorconvictions1" name="noofminorconvictions" type="radio" checked>
+      <input
+        id="noofminorconvictions1"
+        name="noofminorconvictions"
+        type="radio"
+        checked
+      />
       <label for="noofminorconvictions1" class="radio-label">None</label>
 
-      <input id="noofminorconvictions2" name="noofminorconvictions" type="radio">
+      <input
+        id="noofminorconvictions2"
+        name="noofminorconvictions"
+        type="radio"
+      />
       <label for="noofminorconvictions2" class="radio-label">One</label>
-      <input id="noofminorconvictions3" name="noofminorconvictions" type="radio">
+      <input
+        id="noofminorconvictions3"
+        name="noofminorconvictions"
+        type="radio"
+      />
       <label for="noofminorconvictions3" class="radio-label">Two</label>
-      <input id="noofminorconvictions4" name="noofminorconvictions" type="radio">
-      <label for="noofminorconvictions4" class="radio-label">Three and more</label>
+      <input
+        id="noofminorconvictions4"
+        name="noofminorconvictions"
+        type="radio"
+      />
+      <label for="noofminorconvictions4" class="radio-label"
+        >Three and more</label
+      >
 
       <!--<input id="noofminorconvictions3" name="noofminorconvictions" type="radio">
       <label for="noofminoronvictions3" class="radio-label">Two</label>
 
       <input id="noofminorconvictions4" name="noofminorconvictions" type="radio">
       <label for="noofminoronvictions4" class="radio-label">Three or More</label>-->
-
-
     </div>
     <!--<label class="form-check"
       >None
@@ -193,21 +206,28 @@
 <!--<div class="row">
   <div class="col-xs-12 col-md-6"></div>
   <div class="col-xs-12 col-md-6">-->
-<button
-  id="btnUpdate"
-  type="button"
-  class="btn btn-primary shadow-sm px-4 mb-4 mt-4"
-  (click)="open()"
->
-  Submit
-</button>
-<button
-  type="button"
-  class="btn btn-secondary shadow-sm px-4 mb-4 mt-4 ml-4"
-  (click)="startChat()"
->
-  Start Chat
-</button>
-<div *ngIf="isChatInitiated">
-  <h3>Awaiting CSC assignment"</h3>
+
+<div class="form-row">
+  <div class="col-md-2">
+    <button
+      id="btnUpdate"
+      type="button"
+      class="btn btn-primary shadow-sm px-4 mb-4 mt-4"
+      (click)="open()"
+    >
+      Submit
+    </button>
+  </div>
+  <div class="col-md-3">
+    <button
+      type="button"
+      class="btn btn-secondary shadow-sm px-4 mb-4 mt-4 ml-4"
+      (click)="startChat()"
+    >
+      Start Chat
+    </button>
+  </div>
+  <div *ngIf="isChatInitiated" class="col-md-4 mt-4">
+    <strong>Awaiting CSC assignment</strong>
+  </div>
 </div>
