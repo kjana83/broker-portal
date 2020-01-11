@@ -20,8 +20,16 @@ export class LoginComponent {
     user.userName = this.username;
     user.role = this.role;
     this.sessionService.addUser(user);
-    (user.role === "broker") ?
-      this.router.navigate(['bms/dashboard']) :
+    if (user.role === "broker") {
+      if (this.sessionService.returnUrl) {
+        this.router.navigate([this.sessionService.returnUrl]);
+        this.sessionService.returnUrl = "";
+      } else {
+        this.router.navigate(['bms/dashboard']);
+      }
+    }
+    else {
       this.router.navigate(['bms/customer-search']);
+    }
   }
 }

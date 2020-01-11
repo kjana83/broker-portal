@@ -48,84 +48,99 @@
           20 Duplex Ave, Toronto
         </div>
       </div>
-    
 
-    <div class="smallseparator"></div>
-    <div class="row rowpadding">
-      <div class="col-xs-12 col-md-12">
-        <span style="font-weight: bold">Your Information:</span>
+      <div class="smallseparator"></div>
+      <div class="row rowpadding">
+        <div class="col-xs-12 col-md-12">
+          <span style="font-weight: bold">Your Information:</span>
+        </div>
       </div>
-    </div>
 
-    <div class="smallseparator"></div>
+      <div class="smallseparator"></div>
 
-    <div class="row ">
-      <div class="col-xs-12 col-md-4">
-        <span style="font-weight: bold">Name </span>
+      <div class="row ">
+        <div class="col-xs-12 col-md-4">
+          <span style="font-weight: bold">Name </span>
+        </div>
+        <div class="col-xs-12 col-md-8">
+          Test test
+        </div>
       </div>
-      <div class="col-xs-12 col-md-8">
-        Test test
-      </div>
-    </div>
 
-    <div class="row">
-      <div class="col-xs-12 col-md-4">
-        <span style="font-weight: bold">Date of birth </span>
+      <div class="row">
+        <div class="col-xs-12 col-md-4">
+          <span style="font-weight: bold">Date of birth </span>
+        </div>
+        <div class="col-xs-12 col-md-8">
+          01-jan-1992
+        </div>
       </div>
-      <div class="col-xs-12 col-md-8">
-        01-jan-1992
-      </div>
-    </div>
 
-    <div class="row ">
-      <div class="col-xs-12 col-md-4">
-        <span style="font-weight: bold">Email Address </span>
+      <div class="row ">
+        <div class="col-xs-12 col-md-4">
+          <span style="font-weight: bold">Email Address </span>
+        </div>
+        <div class="col-xs-12 col-md-8">
+          test@test.com
+        </div>
       </div>
-      <div class="col-xs-12 col-md-8">
-        test@test.com
-      </div>
-    </div>
 
-    <div class="row ">
-      <div class="col-xs-12 col-md-4">
-        <span style="font-weight: bold">Phone </span>
+      <div class="row ">
+        <div class="col-xs-12 col-md-4">
+          <span style="font-weight: bold">Phone </span>
+        </div>
+        <div class="col-xs-12 col-md-8">
+          416-555-2525
+        </div>
       </div>
-      <div class="col-xs-12 col-md-8">
-        416-555-2525
-      </div>
-    </div>
 
-    <div class="row ">
-      <div class="col-xs-12 col-md-4">
-        <span style="font-weight: bold">Credit consent </span>
+      <div class="row ">
+        <div class="col-xs-12 col-md-4">
+          <span style="font-weight: bold">Credit consent </span>
+        </div>
+        <div class="col-xs-12 col-md-8">
+          Yes
+        </div>
       </div>
-      <div class="col-xs-12 col-md-8">
-        Yes
+
+      <div class="modal-footer">
+        <button
+          id="btnClose"
+          type="button"
+          class="btn btn-secondary shadow-sm px-4"
+          (click)="close()"
+        >
+          <a data-dismiss="modal">
+            Close
+          </a>
+        </button>
+
+        <button
+          id="btnContinue"
+          type="button"
+          class="btn btn-primary shadow-sm px-4"
+        >
+          <a (click)="continue()">
+            Continue
+          </a>
+        </button>
+        <div class="row justify-content-between" *ngIf="user.role === 'csr'">
+          <button
+            id="btnException"
+            type="button"
+            class="btn btn-secondary shadow-sm col-5"
+          >
+            Approve UW Exception
+          </button>
+          <button
+            id="btnExcalate"
+            type="button"
+            class="btn btn-secondary shadow-sm col-5"
+          >
+            Escalate to UW Manager
+          </button>
+        </div>
       </div>
-    </div>
-
-    <div class="modal-footer">
-      <button
-        id="btnConfirm"
-        type="button"
-        class="btn btn-secondary shadow-sm px-4"
-        (click)="close()"
-      >
-        <a data-dismiss="modal">
-          Close
-        </a>
-      </button>
-
-      <button
-        id="btnConfirm"
-        type="button"
-        class="btn btn-primary shadow-sm px-4"
-      >
-        <a (click)="continue()">
-          Continue
-        </a>
-      </button>
     </div>
   </div>
 </div>
-  </div>

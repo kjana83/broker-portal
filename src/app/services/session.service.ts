@@ -9,6 +9,7 @@ import { ToastService } from './toast.service';
 export class SessionService {
   currentUser: User;
   supportList: any[] = [];
+  returnUrl: string;
   constructor(private webSocketService: WebsocketService,
     private toastService: ToastService) {
     this.webSocketService.listen('support').subscribe((data: any) => {

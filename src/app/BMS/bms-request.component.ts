@@ -4,8 +4,8 @@ import { Router } from '@angular/router';
 import { WebsocketService } from '../services/websocket.service';
 import { Quote } from '../model/quote.model';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
-import { Session } from 'protractor';
 import { SessionService } from '../services/session.service';
+import { User } from '../model/user.model';
 
 @Component({
   selector: 'bms-request',
@@ -15,15 +15,13 @@ export class BMSRequestComponent {
   @Input() quote: Quote;
   bmsRequestForm: FormGroup;
   constructor(private activeModel: NgbActiveModal,
-    private router: Router,
     private sessionService: SessionService,
     private websocketService: WebsocketService,
     private fb: FormBuilder) {
     this.bmsRequestForm = this.fb.group({
-      support: new FormControl(),
+      support: new FormControl('uw'),
       reason: new FormControl()
     });
-
   }
   close() {
     this.activeModel.close();

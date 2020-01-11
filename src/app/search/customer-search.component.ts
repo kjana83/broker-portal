@@ -11,9 +11,9 @@ export class CustomerSearchComponent implements OnInit {
   constructor(private fb: FormBuilder, private router: Router) { }
   ngOnInit() {
     this.customerSearchForm = this.fb.group({
-      company: new FormControl(),
+      company: new FormControl('aviva'),
       lastName: new FormControl(),
-      branch: new FormControl(),
+      branch: new FormControl('A-10'),
       postalCode: new FormControl(),
       policyNumber: new FormControl(),
     });

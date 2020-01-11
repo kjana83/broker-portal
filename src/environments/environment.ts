@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  //ws_url: 'https://chat-server.azurewebsites.net/'
-  ws_url: 'http://localhost:5000/'
+  ws_url: 'https://chat-server.azurewebsites.net/'
+  //ws_url: 'http://localhost:5000/'
 };
 
 /*

@@ -7,7 +7,7 @@
   *
   */
 $color1: #f4f4f4;
-$color2: #3197EE;
+$color2: #3197ee;
 html,
 body,
 .container,
@@ -569,7 +569,7 @@ form-group {
 }
 
 .radio input:checked + label {
-  background-color: #4F9F31;
+  background-color: #4f9f31;
   box-shadow: none;
   color: #fff;
 }
@@ -581,7 +581,6 @@ form-group {
 .radio label:last-of-type {
   border-radius: 0 4px 4px 0;
 }
-
 
 .alert-light p {
   margin-bottom: 0;
@@ -696,7 +695,7 @@ select.form-control {
 .chatModal {
   z-index: 999;
   right: 0;
-  width: 15em;
+  width: 20em;
 }
 
 .blinking {
@@ -758,7 +757,7 @@ select.form-control {
 }
 
 .chatModalposition {
-  left: -3em;
+  left: -13em;
 }
 .media-body {
   color: #eee;
@@ -818,4 +817,3 @@ select.form-control {
 a {
   cursor: pointer;
 }
-

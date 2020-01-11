@@ -2,7 +2,7 @@
   <div class="heading-seperator">
     <h1 class="display-4 dashboard-help">Dashboard</h1>
   </div>
-  <h2 class="display-5 mb-3 mt-3">Quick Stats</h2>  
+  <h2 class="display-5 mb-3 mt-3">Quick Stats</h2>
   <div class="row stats-replay-data mt-3">
     <div class="col-xs-12 col-md-2" *ngFor="let stat of stats">
       <div class="card cardbox1">
@@ -68,7 +68,6 @@
       ></apx-chart>
       <div *ngIf="showActivity">
         <table class="table table-striped">
-          
           <thead>
             <tr>
               <th colspan="8" scope="col">
@@ -82,7 +81,6 @@
               <th scope="col">Date</th>
               <th scope="col">Company Name & Branch number</th>
               <th scope="col">Policy Number</th>
-              <th scope="col">Reference #</th>
               <th scope="col">UW Reason</th>
               <th scope="col">UW Agent</th>
               <th scope="col">Policy Transaction</th>
@@ -94,7 +92,7 @@
               <th>Aug 10,2019</th>
               <td>AA-Toronto</td>
               <td>p-702126</td>
-              <td></td>
+
               <th>Eligibility Review</th>
               <td>Ontario -services</td>
               <td>Renewal Rewrite</td>
@@ -104,7 +102,7 @@
               <th>Aug 20,2019</th>
               <td>AA-Toronto</td>
               <td>p-704426</td>
-              <td></td>
+
               <th>Eligibility Review</th>
               <td>Ontario -services</td>
               <td>Renewal Rewrite</td>
@@ -114,7 +112,7 @@
               <th>Jul 12,2019</th>
               <td>AA-Toronto</td>
               <td>p-712026</td>
-              <td></td>
+
               <th>Eligibility Review</th>
               <td>Ontario -services</td>
               <td>Renewal Rewrite</td>
@@ -125,7 +123,7 @@
           <thead>
             <tr>
               <th colspan="8" scope="col">
-                <h4 style="color: red"></h4>
+                <h4 style="color: red">Pending Cancellation List</h4>
               </th>
             </tr>
           </thead>
@@ -135,7 +133,6 @@
               <th scope="col">Date</th>
               <th scope="col">Company name & Branch number</th>
               <th scope="col">Policy Number</th>
-              <th scope="col">Reference #</th>
               <th scope="col">UW Reason</th>
               <th scope="col">UW Agent</th>
               <th scope="col">Policy Transaction</th>
@@ -147,7 +144,7 @@
               <th>Aug 10,2019</th>
               <td>AA-Toronto</td>
               <td>p-702126</td>
-              <td></td>
+
               <th>Review</th>
               <td>Ontario -services</td>
               <td>Renewal Rewrite</td>
@@ -157,7 +154,7 @@
               <th>Aug 20,2019</th>
               <td>AA-Toronto</td>
               <td>p-704426</td>
-              <td></td>
+
               <th>Review</th>
               <td>Ontario -services</td>
               <td>New Business</td>
@@ -167,11 +164,11 @@
               <th>Jul 12,2019</th>
               <td>AA-Toronto</td>
               <td>p-712026</td>
-              <td></td>
+
               <th>Review</th>
               <td>Ontario -services</td>
               <td>Renewal Rewrite</td>
-              <td>Closed<<a>Click To Action</a>/td>
+              <td>Closed<<a>Click To Action</a>/td></td>
             </tr>
           </tbody>
         </table>
@@ -209,7 +206,7 @@
         class="btn btn-style shadow-sm px-4 mb-4"
         (click)="navigateToError()"
       >
-        BMS Error List
+        NB Upload
       </button>
     </div>
   </div>

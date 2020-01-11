@@ -25,15 +25,17 @@ export class ChatComponent implements OnInit {
     private router: Router,
     private chatService: ChatService,
     private http: HttpClient) {
-    
+
     this.chatService.startAChat().subscribe(user => {
       this.startChatWith(user);
     });
-    this.http.get(environment.ws_url + 'users').subscribe((data:User[]) => {
+    this.http.get(environment.ws_url + 'users').subscribe((data: User[]) => {
       this.users = data;
     });
   }
-
+  close() {
+    this.chatWithUser = new User();
+  }
   ngOnInit() {
     this.webSocketService.listen('message').subscribe((data: any) => {
       if (!this.chatWithUser) this.chatWithUser = new User();

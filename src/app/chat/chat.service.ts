@@ -1,7 +1,6 @@
 import { Injectable } from "@angular/core";
 import { Observable, Subject } from 'rxjs';
 import { User } from '../model/user.model';
-import { timingSafeEqual } from 'crypto';
 
 @Injectable({
   providedIn: 'root'
