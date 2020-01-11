@@ -31,29 +31,32 @@
   <!--<div class="separator"></div>-->
   <fieldset class="form-row-field">
     <legend>Do you currently have home insurance?</legend>
-    <label class="form-check"
-      >Yes
-      <input
-        class="form-check-input"
-        type="radio"
-        name="inlineRadioOptions"
-        id="inlineRadio1"
-        value="option1"
-      />
-      <span class="form-check-label"></span>
-    </label>
-    <label class="form-check"
-      >No
-      <input
-        class="form-check-input"
-        type="radio"
-        name="inlineRadioOptions"
-        id="inlineRadio2"
-        value="option2"
-      />
-      <span class="form-check-label"></span>
-    </label>
-  </fieldset>
+    <div class="radio">
+      <input id="inlineRadio1" name="gender" type="radio" checked>
+      <label for="inlineRadio1" class="radio-label">Yes</label>
+
+      <input id="inlineRadio2" name="gender" type="radio">
+      <label for="inlineRadio2" class="radio-label">No</label>
+      </div>
+      <!--<label class="form-check">
+        Yes
+        <input class="form-check-input"
+               type="radio"
+               name="inlineRadioOptions"
+               id="inlineRadio1"
+               value="option1" />
+        <span class="form-check-label"></span>
+      </label>
+      <label class="form-check">
+        No
+        <input class="form-check-input"
+               type="radio"
+               name="inlineRadioOptions"
+               id="inlineRadio2"
+               value="option2" />
+        <span class="form-check-label"></span>
+      </label>-->
+</fieldset>
 
   <div class="form-row-field">
     <label for="no_of_claims"
@@ -80,33 +83,59 @@
 >
   <fieldset class="form-row-field">
     <legend>How many major convictions you had in last 3 years?</legend>
-    <label class="form-check"
-      >None
-      <input
-        class="form-check-input"
-        type="radio"
-        name="inlineRadioOptions"
-        id="inlineRadio1"
-        value="option1"
-      />
+    <div class="radio">
+      <input id="noofconvictions1" name="noofconvictions" type="radio">
+      <label for="noofconvictions1" class="radio-label">None</label>
+
+      
+
+      <input id="noofconvictions2" name="noofconvictions" type="radio">
+      <label for="noofconvictions2" class="radio-label">1 or more</label>
+
+
+    </div>
+    <!--<label class="form-check">
+      None
+      <input class="form-check-input"
+             type="radio"
+             name="inlineRadioOptions"
+             id="inlineRadio1"
+             value="option1" />
       <span class="form-check-label"></span>
     </label>
-    <label class="form-check"
-      >1 or More
-      <input
-        class="form-check-input"
-        type="radio"
-        name="inlineRadioOptions"
-        id="inlineRadio2"
-        value="option2"
-      />
+    <label class="form-check">
+      1 or More
+      <input class="form-check-input"
+             type="radio"
+             name="inlineRadioOptions"
+             id="inlineRadio2"
+             value="option2" />
       <span class="form-check-label"></span>
-    </label>
+    </label>-->
   </fieldset>
 
   <fieldset class="form-row-field">
     <legend>How many minor convictions you had in last 3 years?</legend>
-    <label class="form-check"
+    <div class="radio">
+      <input id="noofminorconvictions1" name="noofminorconvictions" type="radio" checked>
+      <label for="noofminorconvictions1" class="radio-label">None</label>
+
+      <input id="noofminorconvictions2" name="noofminorconvictions" type="radio">
+      <label for="noofminorconvictions2" class="radio-label">One</label>
+      <input id="noofminorconvictions3" name="noofminorconvictions" type="radio">
+      <label for="noofminorconvictions3" class="radio-label">Two</label>
+      <input id="noofminorconvictions4" name="noofminorconvictions" type="radio">
+      <label for="noofminorconvictions4" class="radio-label">Three and more</label>
+
+      <!--<input id="noofminorconvictions3" name="noofminorconvictions" type="radio">
+      <label for="noofminoronvictions3" class="radio-label">Two</label>
+
+      <input id="noofminorconvictions4" name="noofminorconvictions" type="radio">
+      <label for="noofminoronvictions4" class="radio-label">Three or More</label>-->
+
+
+    </div>
+    <!--<label class="form-check"
       >None
       <input
         class="form-check-input"
@@ -149,7 +178,7 @@
         value="option2"
       />
       <span class="form-check-label"></span>
-    </label>
+    </label>-->
   </fieldset>
 </div>
 <div [ngClass]="quote.status === 'UW Approval Required' ? 'd-block' : 'd-none'">
