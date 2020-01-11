@@ -6,6 +6,8 @@ import { WebsocketService } from '../services/websocket.service';
 import { User } from '../model/user.model';
 import { ChatMessage } from '../model/chatMessage.model';
 import { ChatService } from './chat.service';
+import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-chat',
@@ -20,9 +22,15 @@ export class ChatComponent implements OnInit {
   chatMsgs: ChatMessage[] = [];
   constructor(
     private webSocketService: WebsocketService,
-    private router: Router, private chatService: ChatService) {
+    private router: Router,
+    private chatService: ChatService,
+    private http: HttpClient) {
+    
     this.chatService.startAChat().subscribe(user => {
       this.startChatWith(user);
+    });
+    this.http.get(environment.ws_url + 'users').subscribe((data:User[]) => {
+      this.users = data;
     });
   }
 
@@ -64,10 +72,14 @@ export class ChatComponent implements OnInit {
     });
 
     this.webSocketService.listen('users').subscribe((users: any[]) => {
-      console.log(users);
       this.users = users.filter((user) => {
         return user.userId !== this.webSocketService.userId;
       });
+      this.users = _.uniqBy(users, (usr) => {
+        return usr.userName;
+      });
+
+      console.log(users);
     });
   }
 
