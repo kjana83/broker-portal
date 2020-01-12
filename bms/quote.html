@@ -78,19 +78,20 @@
 
       .header {
         overflow: hidden;
-        background-color: #409aa8;
         padding: 1.5em;
+        background: url("./logo.png") no-repeat 46px #f5f5f5;
+        padding: 4em 3.65em 2em 3.65em;
       }
 
       .header a {
         float: left;
-        color: #fff;
         text-align: center;
         text-decoration: none;
         font-size: 18px;
         line-height: 25px;
         border-radius: 4px;
         margin-right: 1em;
+        color: #000;
       }
 
       .header a.logo {
@@ -99,11 +100,11 @@
       }
 
       .header a:hover {
-        color: white;
+        color: #000000;
       }
 
       .header a.active {
-        color: white;
+        color: #000000;
       }
 
       .header-right {
@@ -158,8 +159,8 @@
         padding: 0;
       }
       .card-body-header {
-        background-color: #413e45;
-        color: #fff;
+        background-color: #f5f5f5;
+        color: black;
         padding: 0.5em 1em;
       }
       .container {
@@ -167,9 +168,7 @@
         margin: auto;
         padding-left: 3.65em;
       }
-      .header {
-        padding: 2em 3.65em 2em 3.65em;
-      }
+
       .card-text {
         padding: 1em;
         text-align: center;
@@ -185,11 +184,14 @@
       small {
         font-size: 15px;
       }
+      .getThisRate {
+        background-color: #d95136;
+        color: white;
+      }
     </style>
   </head>
   <body>
     <div class="header">
-      <a href="#default" class="logo">BMSLogo</a>
       <div class="header-right">
         <a class="active" href="#home">Home</a>
         <a href="#about">Logout</a>
@@ -221,6 +223,14 @@
 
                   <button
                     type="button"
+                    class="btn btn-secondary getThisRate"
+                    data-toggle="modal"
+                    data-target="#exampleModal"
+                  >
+                    Get this rate
+                  </button>
+                  <button
+                    type="button"
                     class="btn btn-primary"
                     data-toggle="modal"
                     data-target="#exampleModal"
@@ -249,6 +259,14 @@
                   <p><small>$191 per month</small></p>
                   <button
                     type="button"
+                    class="btn btn-secondary getThisRate"
+                    data-toggle="modal"
+                    data-target="#exampleModal"
+                  >
+                    Get this rate
+                  </button>
+                  <button
+                    type="button"
                     class="btn btn-primary"
                     data-toggle="modal"
                     data-target="#exampleModal"
@@ -274,7 +292,14 @@
                     $2,508<small>&nbsp;&nbsp;yearly</small>
                   </h2>
                   <p><small>$209 per month</small></p>
-
+                  <button
+                    type="button"
+                    class="btn btn-secondary getThisRate"
+                    data-toggle="modal"
+                    data-target="#exampleModal"
+                  >
+                    Get this rate
+                  </button>
                   <button
                     type="button"
                     class="btn btn-primary"
@@ -302,7 +327,14 @@
                     $2,412<small>&nbsp;&nbsp;yearly</small>
                   </h2>
                   <p><small>$201 per month</small></p>
-
+                  <button
+                    type="button"
+                    class="btn btn-secondary getThisRate"
+                    data-toggle="modal"
+                    data-target="#exampleModal"
+                  >
+                    Get this rate
+                  </button>
                   <button
                     type="button"
                     class="btn btn-primary"

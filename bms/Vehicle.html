@@ -78,19 +78,20 @@
 
       .header {
         overflow: hidden;
-        background-color: #409aa8;
         padding: 1.5em;
+        background: url("./logo.png") no-repeat 46px #f5f5f5;
+        padding: 4em 3.65em 2em 3.65em;
       }
 
       .header a {
         float: left;
-        color: #fff;
         text-align: center;
         text-decoration: none;
         font-size: 18px;
         line-height: 25px;
         border-radius: 4px;
         margin-right: 1em;
+        color: #000;
       }
 
       .header a.logo {
@@ -99,11 +100,11 @@
       }
 
       .header a:hover {
-        color: white;
+        color: #000000;
       }
 
       .header a.active {
-        color: white;
+        color: #000000;
       }
 
       .header-right {
@@ -164,15 +165,10 @@
         margin: auto;
         padding-left: 3.65em;
       }
-
-      .header {
-        padding: 2em 3.65em 2em 3.65em;
-      }
     </style>
   </head>
   <body>
     <div class="header">
-      <a href="#default" class="logo">BMSLogo</a>
       <div class="header-right">
         <a class="active" href="#home">Home</a>
         <a href="#about">Logout</a>
@@ -247,7 +243,7 @@
             <label>Daily commute (one-way):</label>
             <div>
               <select class="form-control col-4" id="">
-                <option>Less then 10 Kms</option>
+                <option>Less than 10 Kms</option>
                 <option>10 Kms</option>
                 <option>15 Kms</option>
                 <option>20 Kms</option>
@@ -264,7 +260,6 @@
             <label>Comprehensive deductible:</label>
             <div>
               <select id="" class="form-control col-4">
-                <option>Less then 10 Kms</option>
                 <option>$200</option>
                 <option>$300</option>
                 <option>$500</option>
