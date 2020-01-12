@@ -9,4 +9,7 @@ export class NavWidgetComponent {
     constructor(public sessionService: SessionService) {
 
     }
+    startTour() {
+        this.sessionService.tourSubject.next(true);
+    }
 }

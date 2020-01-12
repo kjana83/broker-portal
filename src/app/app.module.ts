@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
+import { GuidedTourModule } from 'ngx-guided-tour';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { LoginComponent } from './login/login.component';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
+    GuidedTourModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

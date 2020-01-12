@@ -1,6 +1,6 @@
 <!-- Vertical navbar -->
 <div class="vertical-nav" id="sidebar">
-  <div class="py-4 px-3 login-details">
+  <div class="py-4 px-3 login-details tourWidget">
     <div class="media d-flex align-items-center">
       <img
         src="https://res.cloudinary.com/mhmd/image/upload/v1556074849/avatar-1_tcnd60.png"
@@ -18,7 +18,7 @@
   <!--<p class="text-gray font-weight-bold text-uppercase px-3 small pb-4 mb-0">
     Main
   </p>-->
-  <ul class="nav flex-column mb-0">
+  <ul class="nav flex-column mb-0 tourMenu">
     <li class="nav-item">
       <a [routerLink]="['/bms/dashboard']" class="nav-link  font-weight-bold">
         <i class="fa fa-th-large mr-3  fa-fw"></i>
@@ -68,6 +68,12 @@
       <a class="nav-link">
         <i class="fa fa-picture-o mr-3  fa-fw"></i>
         Documents
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" (click)="startTour()">
+        <i class="fa fa-picture-o mr-3  fa-fw"></i>
+        Portal Tour Guide
       </a>
     </li>
   </ul>

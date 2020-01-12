@@ -23,7 +23,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-xs-12 col-md-6">
+    <div class="nbMonthlyChart col-xs-12 col-md-6">
       <apx-chart
         [series]="nbChart.series"
         [xaxis]="nbChart.xaxis"
@@ -60,7 +60,7 @@
         </h2>
         <!-- <i class="fa fa-compress mr-3  fa-fw"></i> -->
       </div>
-      <apx-chart
+      <apx-chart class="tourActivityList"
         [series]="pendingChart.series"
         [plotOptions]="pendingChart.plotOptions"
         [chart]="pendingChart.chart"
@@ -187,7 +187,7 @@
       >
         BMS Upload Summary
       </h2>
-      <apx-chart
+      <apx-chart class="tourBMSSummary"
         [series]="bmsUploadChart.series"
         [plotOptions]="bmsUploadChart.plotOptions"
         [chart]="bmsUploadChart.chart"

@@ -20,6 +20,7 @@ import { SupportComponent } from '../queue/support.component';
 import { ToastsContainer } from '../base/toast-container.component';
 import { CustomerSearchComponent } from '../search/customer-search.component';
 import { SearchResultsComponent } from '../search/search-results.component';
+import { GuidedTourModule } from 'ngx-guided-tour';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { SearchResultsComponent } from '../search/search-results.component';
     ReactiveFormsModule,
     NgbModule,
     BMSRoutingModule,
-    NgApexchartsModule
+    NgApexchartsModule,
+    GuidedTourModule.forRoot()
   ],
   entryComponents: [
     BMSReviewComponent,

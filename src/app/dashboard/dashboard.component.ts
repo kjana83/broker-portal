@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { Router } from '@angular/router';
+import { GuidedTourService, GuidedTour } from 'ngx-guided-tour';
 
 @Component({
   selector: 'app-dashboard',
@@ -13,13 +14,19 @@ export class DashboardComponent {
   bmsUploadChart: any;
   showActivity: boolean;
   sanctionChart: any;
+  dashboardTour: GuidedTour;
   toggleActivity() {
     this.showActivity = !this.showActivity;
   }
   navigateToError() {
     this.router.navigate(['/bms/bms-error']);
   }
-  constructor(private router: Router) {
+  startTour() {
+    this.guidedTourService.startTour(this.dashboardTour);
+  }
+  constructor(private router: Router,
+    private guidedTourService: GuidedTourService) {
+    
     this.stats = [
       { type: 'Clients', count: 2 },
       { type: 'Policies', count: 7 },
