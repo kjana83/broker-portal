@@ -1,83 +1,86 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
 
-<head>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-        crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      h1 {
+        font-size: 2em;
+      }
 
+      .radio {
+        display: flex;
+        overflow: hidden;
+      }
 
-  <style>
-    h1 {
-      font-size: 2em;
-    }
+      form-group {
+        margin-bottom: 1em;
+      }
 
-    .radio {
-      display: flex;
-      overflow: hidden;
-    }
+      .radio input {
+        position: absolute !important;
+        clip: rect(0, 0, 0, 0);
+        height: 1px;
+        width: 1px;
+        border: 0;
+        overflow: hidden;
+      }
 
-    form-group {
-      margin-bottom: 1em;
-    }
-
-    .radio input {
-      position: absolute !important;
-      clip: rect(0, 0, 0, 0);
-      height: 1px;
-      width: 1px;
-      border: 0;
-      overflow: hidden;
-    }
-
-    .radio label {
-      background-color: #eee;
-      color: rgba(0, 0, 0, 0.6);
-      font-size: 1em;
-      line-height: 1;
-      text-align: center;
-      padding: 1em;
-      margin-right: -1px;
-      border: 1px solid rgba(0, 0, 0, 0.2);
-      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
-      transition: all 0.1s ease-in-out;
-    }
+      .radio label {
+        background-color: #eee;
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 1em;
+        line-height: 1;
+        text-align: center;
+        padding: 1em;
+        margin-right: -1px;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3),
+          0 1px rgba(255, 255, 255, 0.1);
+        transition: all 0.1s ease-in-out;
+      }
 
       .radio label:hover {
         cursor: pointer;
       }
 
-    .radio input:checked + label {
-      background-color: #004FB6;
-      box-shadow: none;
-      color: #fff;
-    }
+      .radio input:checked + label {
+        background-color: #004fb6;
+        box-shadow: none;
+        color: #fff;
+      }
 
-    .radio label:first-of-type {
-      border-radius: 4px 0 0 4px;
-    }
+      .radio label:first-of-type {
+        border-radius: 4px 0 0 4px;
+      }
 
-    .radio label:last-of-type {
-      border-radius: 0 4px 4px 0;
-    }
+      .radio label:last-of-type {
+        border-radius: 0 4px 4px 0;
+      }
 
-    * {
-      box-sizing: border-box;
-    }
+      * {
+        box-sizing: border-box;
+      }
 
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 1em;
-      color: #444;
-    }
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1em;
+        color: #444;
+      }
 
-    .header {
-      overflow: hidden;
-      background-color: #409AA8;
-      padding: 1.5em;
-    }
+      .header {
+        overflow: hidden;
+        background-color: #409aa8;
+        padding: 1.5em;
+      }
 
       .header a {
         float: left;
@@ -90,106 +93,108 @@
         margin-right: 1em;
       }
 
-        .header a.logo {
-          font-size: 1.5em;
-          font-weight: bold;
-        }
+      .header a.logo {
+        font-size: 1.5em;
+        font-weight: bold;
+      }
 
-        .header a:hover {
-          color: white;
-        }
+      .header a:hover {
+        color: white;
+      }
 
-        .header a.active {
-          color: white;
-        }
-
-    .header-right {
-      float: right;
-    }
-
-    label, legend {
-      font-size: 1em;
-      font-weight: bold;
-      color: #444;
-    }
-
-    input[type="text"], input[type="date"] {
-      width: 40%;
-      padding: 1.25em;
-      border: 1px solid #ccc;
-    }
-
-    @media screen and (max-width: 500px) {
-      .header a {
-        float: none;
-        display: block;
-        text-align: left;
+      .header a.active {
+        color: white;
       }
 
       .header-right {
-        float: none;
+        float: right;
       }
-    }
-    .btn-primary {
-      font-size: 1em;
-      margin-right: 2em;
-      background-color: #4F9F31;
-      color: #fff;
-      border-color: #4F9F31;
-      min-width: 9em;
-      padding: 0.5em;
-    }
 
-    .btn-secondary {
-      font-size: 1em;
-      margin-right: 2em;
-      background-color: #ccc;
-      color: #444;
-      border-color: #ccc;
-      min-width: 9em;
-      padding: 0.5em;
-    }
-    .card-body {
-      flex: 1 1 auto;
-      padding: 0;
-    }
-    .card-body-header {
-      background-color: #413e45;
-      color: #fff;
-      padding: 0.5em 1em;
-    }
-    .container {
-      max-width: 80em;
-      margin: auto;
-    }
-    .header {
-      padding: 2em 3.65em 2em 3.65em;
-    }
-    .card-text{
-        padding:1em;
-    }
-                
-  
-    .modal-header {
-      background-color: #FFA000;
-      color: #444;
-    }
-  </style>
-</head>
-<body>
-  <div class="header">
-    <a href="#default" class="logo">BMSLogo</a>
-    <div class="header-right">
-      <a class="active" href="#home">Home</a>
-      <a href="#about">Logout</a>
+      label,
+      legend {
+        font-size: 1em;
+        font-weight: bold;
+        color: #444;
+      }
+
+      input[type="text"],
+      input[type="date"] {
+        width: 40%;
+        padding: 1.25em;
+        border: 1px solid #ccc;
+      }
+
+      @media screen and (max-width: 500px) {
+        .header a {
+          float: none;
+          display: block;
+          text-align: left;
+        }
+
+        .header-right {
+          float: none;
+        }
+      }
+      .btn-primary {
+        font-size: 1em;
+        background-color: #4f9f31;
+        color: #fff;
+        border-color: #4f9f31;
+        min-width: 9em;
+        padding: 0.5em;
+      }
+
+      .btn-secondary {
+        font-size: 1em;
+        margin-right: 2em;
+        background-color: #ccc;
+        color: #444;
+        border-color: #ccc;
+        min-width: 9em;
+        padding: 0.5em;
+      }
+      .card-body {
+        flex: 1 1 auto;
+        padding: 0;
+      }
+      .card-body-header {
+        background-color: #413e45;
+        color: #fff;
+        padding: 0.5em 1em;
+      }
+      .container {
+        max-width: 80em;
+        margin: auto;
+        padding-left: 3.65em;
+      }
+      .header {
+        padding: 2em 3.65em 2em 3.65em;
+      }
+      .card-text {
+        padding: 1em;
+        text-align: center;
+      }
+
+      .modal-header {
+        background-color: #ffa000;
+        color: #444;
+      }
+      .centerAlign {
+        margin: auto;
+      }
+      small {
+        font-size: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <a href="#default" class="logo">BMSLogo</a>
+      <div class="header-right">
+        <a class="active" href="#home">Home</a>
+        <a href="#about">Logout</a>
+      </div>
     </div>
-  </div>
-  
-
-
-
-   
-
     <section class="container">
       <h1 class="mt-3 mb-3">
         Here are your Quotes
@@ -197,111 +202,183 @@
 
       <form name="driverForm">
         <div class="row">
-          <div class="col-sm-3 mt-4" *ngFor="let quote of quotes">
+          <div
+            class="col-4 align-self-center mt-4 centerAlign"
+            *ngFor="let quote of quotes"
+          >
             <div class="card">
               <div class="card-body">
-                <div class="d-flex w-100 justify-content-between card-body-header">
-                  <h3 class="mb-1">ABC Insurance</h3>
+                <div
+                  class="d-flex w-100 justify-content-between card-body-header"
+                >
+                  <h3 class="mb-1">Lowest Rates</h3>
                 </div>
                 <div class="card-text">
-                  <p class="status">$2,261</p>
+                  <h2 class="status">
+                    $2,256<small>&nbsp;&nbsp;yearly</small>
+                  </h2>
+                  <p><small>$188 per month</small></p>
 
-
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-toggle="modal"
+                    data-target="#exampleModal"
+                  >
                     Upload
                   </button>
-
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-sm-3 mt-4" *ngFor="let quote of quotes">
+        </div>
+        <div class="row">
+          <div class="col-4 centerAlign mt-4" *ngFor="let quote of quotes">
             <div class="card">
               <div class="card-body">
-                <div class="d-flex w-100 justify-content-between card-body-header">
-                  <h3 class="mb-1">ABC Insurance</h3>
+                <div
+                  class="d-flex w-100 justify-content-between card-body-header"
+                >
+                  <h3 class="mb-1">Aviva Insurance</h3>
                 </div>
                 <div class="card-text">
-                  <p class="status">$2,261</p>
+                  <h2 class="status">
+                    $2,292<small>&nbsp;&nbsp;yearly</small>
+                  </h2>
 
-
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                  <p><small>$191 per month</small></p>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-toggle="modal"
+                    data-target="#exampleModal"
+                  >
                     Upload
                   </button>
-
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-sm-3 mt-4" *ngFor="let quote of quotes">
+        </div>
+        <div class="row">
+          <div class="col-4 centerAlign mt-4" *ngFor="let quote of quotes">
             <div class="card">
               <div class="card-body">
-                <div class="d-flex w-100 justify-content-between card-body-header">
-                  <h3 class="mb-1">ABC Insurance</h3>
+                <div
+                  class="d-flex w-100 justify-content-between card-body-header"
+                >
+                  <h3 class="mb-1">Allstate</h3>
                 </div>
                 <div class="card-text">
-                  <p class="status">$2,261</p>
+                  <h2 class="status">
+                    $2,508<small>&nbsp;&nbsp;yearly</small>
+                  </h2>
+                  <p><small>$209 per month</small></p>
 
-
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-toggle="modal"
+                    data-target="#exampleModal"
+                  >
                     Upload
                   </button>
-
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-sm-3 mt-4" *ngFor="let quote of quotes">
+        </div>
+        <div class="row">
+          <div class="col-4 centerAlign mt-4" *ngFor="let quote of quotes">
             <div class="card">
               <div class="card-body">
-                <div class="d-flex w-100 justify-content-between card-body-header">
-                  <h3 class="mb-1">ABC Insurance</h3>
+                <div
+                  class="d-flex w-100 justify-content-between card-body-header"
+                >
+                  <h3 class="mb-1">sonnet</h3>
                 </div>
                 <div class="card-text">
-                  <p class="status">$2,261</p>
+                  <h2 class="status">
+                    $2,412<small>&nbsp;&nbsp;yearly</small>
+                  </h2>
+                  <p><small>$201 per month</small></p>
 
-
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-toggle="modal"
+                    data-target="#exampleModal"
+                  >
                     Upload
                   </button>
-
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-      
         <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Something went wrong</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <h5 class="modal-title" id="exampleModalLabel">
+                  Something went wrong
+                </h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
               <div class="modal-body">
-                You can bind the policy by going into BMS Dashboard
+                Exceeded UW threshold. Go to the portal to bind the policy.
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <a class="btn btn-primary" href="http://abroker-portal.azurewebsites.net/bms/bms-update/R2726489" role="button">Go to Dashboard</a>
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+                <a
+                  class="btn btn-primary"
+                  href="http://abroker-portal.azurewebsites.net/bms/bms-update/R2726489"
+                  role="button"
+                  >Go to Portal</a
+                >
               </div>
             </div>
           </div>
         </div>
       </form>
     </section>
-  
-  
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-          crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-          crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-          crossorigin="anonymous"></script>
-</body>
 
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
