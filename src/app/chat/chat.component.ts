@@ -30,7 +30,8 @@ export class ChatComponent implements OnInit {
       this.startChatWith(user);
     });
     this.http.get(environment.ws_url + 'users').subscribe((data: User[]) => {
-      this.users = data;
+      this.users = this.users.concat(data);
+      this.users = this.distinct(this.users, 'userName')
     });
   }
   close() {
@@ -129,5 +130,18 @@ export class ChatComponent implements OnInit {
 
   navigateTo(link: string) {
     this.router.navigate([link]);
+  }
+
+  distinct(users, field) {
+    const map = new Map();
+
+    let userList = [];
+    for (let i = users.length - 1; i >= 0; i = i - 1) {
+      if (!map.has(users[i][field])) {
+        userList.push(users[i]);
+        map.set(users[i][field], true);
+      }
+    }
+    return userList;
   }
 }
