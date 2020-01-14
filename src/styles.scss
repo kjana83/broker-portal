@@ -373,7 +373,7 @@ body {
 
 .fa-angle-down,
 .fa-angle-up {
-  font-size: 32px;
+  font-size: 1.25em;
   padding-top: 5px;
   padding-left: 10px;
 }
@@ -429,9 +429,15 @@ button small {
   padding: 0.5em 1em;
 }
 
-.user {
-  color: #ffd900;
+.user ,.branch{
+  //color: #ffd900;
+  color:#444;
+  font-weight:bold;
   margin-right: 10px;
+}
+.user span, .branch span{
+    font-weight:normal;
+
 }
 .chatModal {
   .list-group {
@@ -598,10 +604,15 @@ input[type="password"] {
   font-size: 1em;
   color: #444;
   border: 1px solid #aaa;
+  background-color: #F9F9F9;
 }
 select.form-control {
   height: 3.125em;
   border: 1px solid #aaa;
+  background-color: #F9F9F9;
+}
+textarea {
+  background-color: #F9F9F9;
 }
 .form-row-field {
   margin-bottom: 0.5em;
@@ -660,7 +671,8 @@ select.form-control {
 
 .table thead th {
   border-bottom: 1px solid #ccc;
-  background-color: #eee;
+  background-color: #444;
+  color: #fff;
 }
 
 /*.login-section {
@@ -776,50 +788,82 @@ select.form-control {
   margin-bottom: 0;
 }
 .modal-header {
-  color: #001e60;
+  color: #fff;
   font-weight: bold;
   font-size: 1.5em;
-  background-color: #ccc;
+  background-color: #4F9F31;
+}
+.modal-header .close {
+  border: none;
+  color: #fff;
 }
 .status {
   color: #001e60;
   font-weight: bold;
-}
-.modal-title {
-  font-size: 1em;
-  color: #444;
-}
-.btn-secondary {
-  background-color: #ccc;
-  color: #444;
-  border: 1px solid #ccc;
-  border-radius: 0;
-  padding: 0.5em 1em;
   text-transform: uppercase;
+}
+.status:hover {
+  color: #444;
+  text-decoration:none;
+  }
+
+  tex .modal-title {
+    font-size: 1em;
+    color: #444;
+  }
+
+  .btn-secondary {
+    background-color: #ccc;
+    color: #444;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    padding: 0.5em 1em;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .btn-secondary:hover {
+    background-color: #444;
+    color: #ccc;
+  }
+
+  .btn-secondary:hover a {
+    color: #ccc;
+  }
+
+  .form-group {
+    margin-bottom: 1.5em;
+  }
+
+  .card a {
+    color: #004fb6;
+    font-weight: bold;
+  }
+
+  .dashboard-help {
+    width: 40%;
+  }
+
+  .walkme-player.walkme-position-major-bottom {
+    top: 200px;
+  }
+
+  a {
+    cursor: pointer;
+  }
+
+caption {
+  caption-side: top;
+  text-align: center;
+  font-size: 1.25em;
   font-weight: bold;
-}
-.btn-secondary:hover {
-  background-color: #444;
-  color: #ccc;
-}
-.btn-secondary:hover a {
-  color: #ccc;
+  color:#444;
 }
 
-.form-group {
-  margin-bottom: 1.5em;
-}
-.card a {
-  color: #004fb6;
-  font-weight: bold;
-}
-.dashboard-help {
-  width: 40%;
-}
+  .table-striped tbody tr:nth-of-type(odd) {
+    background-color: #eee;
+  }
 
-.walkme-player.walkme-position-major-bottom {
-  top: 200px;
-}
-a {
-  cursor: pointer;
-}
+  .table-striped tbody tr:nth-of-type(even) {
+    background-color: #ccc;
+  }

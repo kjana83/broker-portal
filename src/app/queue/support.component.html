@@ -1,5 +1,5 @@
-<h3 class="display-4 ">UW Support</h3>
-<div class="row">
+<h3 class="display-4 heading-seperator">UW Support</h3>
+<div class="row mt-3">
   <div class="col-sm-6" *ngFor="let req of sessionService.supportList">
     <div class="card">
       <div class="card-body">
@@ -10,15 +10,15 @@
           <small>{{ req.date }}</small>
         </div>
         <div class="card-text">
-          <p>
-            <label class="user">User: &nbsp; {{ req.user.userName }}</label>
-            <label class="branch"> Branch: &nbsp; {{ req.branch }} </label>
-          </p>
+         
+            <p class="user">User: &nbsp; <span>{{ req.user.userName }}</span></p>
+            <p class="branch"> Branch: &nbsp;<span>{{ req.branch }}</span> </p>
+          
           <p>
             {{ req.reason }}
           </p>
-          <a (click)="startChat(req)" class="btn btn-primary">
-            {{ req.statusLabel }}</a
+          <button (click)="startChat(req)" class="btn btn-primary">
+            {{ req.statusLabel }}</button
           >
           <div
             class="pull-right {{
